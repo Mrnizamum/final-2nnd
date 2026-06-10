@@ -32,7 +32,7 @@ import { Route as AboutHsseRouteImport } from './routes/about.hsse'
 import { Route as AboutGovernanceRouteImport } from './routes/about.governance'
 import { Route as AboutDeliveryRouteImport } from './routes/about.delivery'
 import { Route as AboutCommitmentRouteImport } from './routes/about.commitment'
-import { Route as AboutClientRouteImport } from './routes/about.client'
+import { Route as AboutClientRouteImport } from './routes/about/client'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
