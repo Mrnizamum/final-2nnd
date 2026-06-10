@@ -15,6 +15,12 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BusinessRouteImport } from './routes/business'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NetworkPowerGenerationRouteImport } from './routes/network.power-generation'
+import { Route as NetworkOilGasRouteImport } from './routes/network.oil-gas'
+import { Route as NetworkLandTransportRouteImport } from './routes/network.land-transport'
+import { Route as NetworkInfrastructureRouteImport } from './routes/network.infrastructure'
+import { Route as NetworkGreenEnergyRouteImport } from './routes/network.green-energy'
+import { Route as NetworkConstructionRouteImport } from './routes/network.construction'
 import { Route as BusinessProjectWorksRouteImport } from './routes/business.project-works'
 import { Route as BusinessPartnershipRouteImport } from './routes/business.partnership'
 import { Route as BusinessMaintenanceRouteImport } from './routes/business.maintenance'
@@ -57,6 +63,36 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkPowerGenerationRoute = NetworkPowerGenerationRouteImport.update({
+  id: '/power-generation',
+  path: '/power-generation',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const NetworkOilGasRoute = NetworkOilGasRouteImport.update({
+  id: '/oil-gas',
+  path: '/oil-gas',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const NetworkLandTransportRoute = NetworkLandTransportRouteImport.update({
+  id: '/land-transport',
+  path: '/land-transport',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const NetworkInfrastructureRoute = NetworkInfrastructureRouteImport.update({
+  id: '/infrastructure',
+  path: '/infrastructure',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const NetworkGreenEnergyRoute = NetworkGreenEnergyRouteImport.update({
+  id: '/green-energy',
+  path: '/green-energy',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const NetworkConstructionRoute = NetworkConstructionRouteImport.update({
+  id: '/construction',
+  path: '/construction',
+  getParentRoute: () => NetworkRoute,
 } as any)
 const BusinessProjectWorksRoute = BusinessProjectWorksRouteImport.update({
   id: '/project-works',
@@ -124,7 +160,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRouteWithChildren
   '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
-  '/network': typeof NetworkRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -138,13 +174,19 @@ export interface FileRoutesByFullPath {
   '/business/maintenance': typeof BusinessMaintenanceRoute
   '/business/partnership': typeof BusinessPartnershipRoute
   '/business/project-works': typeof BusinessProjectWorksRoute
+  '/network/construction': typeof NetworkConstructionRoute
+  '/network/green-energy': typeof NetworkGreenEnergyRoute
+  '/network/infrastructure': typeof NetworkInfrastructureRoute
+  '/network/land-transport': typeof NetworkLandTransportRoute
+  '/network/oil-gas': typeof NetworkOilGasRoute
+  '/network/power-generation': typeof NetworkPowerGenerationRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRouteWithChildren
   '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
-  '/network': typeof NetworkRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -158,6 +200,12 @@ export interface FileRoutesByTo {
   '/business/maintenance': typeof BusinessMaintenanceRoute
   '/business/partnership': typeof BusinessPartnershipRoute
   '/business/project-works': typeof BusinessProjectWorksRoute
+  '/network/construction': typeof NetworkConstructionRoute
+  '/network/green-energy': typeof NetworkGreenEnergyRoute
+  '/network/infrastructure': typeof NetworkInfrastructureRoute
+  '/network/land-transport': typeof NetworkLandTransportRoute
+  '/network/oil-gas': typeof NetworkOilGasRoute
+  '/network/power-generation': typeof NetworkPowerGenerationRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -165,7 +213,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRouteWithChildren
   '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
-  '/network': typeof NetworkRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -179,6 +227,12 @@ export interface FileRoutesById {
   '/business/maintenance': typeof BusinessMaintenanceRoute
   '/business/partnership': typeof BusinessPartnershipRoute
   '/business/project-works': typeof BusinessProjectWorksRoute
+  '/network/construction': typeof NetworkConstructionRoute
+  '/network/green-energy': typeof NetworkGreenEnergyRoute
+  '/network/infrastructure': typeof NetworkInfrastructureRoute
+  '/network/land-transport': typeof NetworkLandTransportRoute
+  '/network/oil-gas': typeof NetworkOilGasRoute
+  '/network/power-generation': typeof NetworkPowerGenerationRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,6 +255,12 @@ export interface FileRouteTypes {
     | '/business/maintenance'
     | '/business/partnership'
     | '/business/project-works'
+    | '/network/construction'
+    | '/network/green-energy'
+    | '/network/infrastructure'
+    | '/network/land-transport'
+    | '/network/oil-gas'
+    | '/network/power-generation'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,6 +281,12 @@ export interface FileRouteTypes {
     | '/business/maintenance'
     | '/business/partnership'
     | '/business/project-works'
+    | '/network/construction'
+    | '/network/green-energy'
+    | '/network/infrastructure'
+    | '/network/land-transport'
+    | '/network/oil-gas'
+    | '/network/power-generation'
   id:
     | '__root__'
     | '/'
@@ -241,6 +307,12 @@ export interface FileRouteTypes {
     | '/business/maintenance'
     | '/business/partnership'
     | '/business/project-works'
+    | '/network/construction'
+    | '/network/green-energy'
+    | '/network/infrastructure'
+    | '/network/land-transport'
+    | '/network/oil-gas'
+    | '/network/power-generation'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -248,7 +320,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRouteWithChildren
   BusinessRoute: typeof BusinessRouteWithChildren
   ContactRoute: typeof ContactRoute
-  NetworkRoute: typeof NetworkRoute
+  NetworkRoute: typeof NetworkRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -295,6 +367,48 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/network/power-generation': {
+      id: '/network/power-generation'
+      path: '/power-generation'
+      fullPath: '/network/power-generation'
+      preLoaderRoute: typeof NetworkPowerGenerationRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/network/oil-gas': {
+      id: '/network/oil-gas'
+      path: '/oil-gas'
+      fullPath: '/network/oil-gas'
+      preLoaderRoute: typeof NetworkOilGasRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/network/land-transport': {
+      id: '/network/land-transport'
+      path: '/land-transport'
+      fullPath: '/network/land-transport'
+      preLoaderRoute: typeof NetworkLandTransportRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/network/infrastructure': {
+      id: '/network/infrastructure'
+      path: '/infrastructure'
+      fullPath: '/network/infrastructure'
+      preLoaderRoute: typeof NetworkInfrastructureRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/network/green-energy': {
+      id: '/network/green-energy'
+      path: '/green-energy'
+      fullPath: '/network/green-energy'
+      preLoaderRoute: typeof NetworkGreenEnergyRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/network/construction': {
+      id: '/network/construction'
+      path: '/construction'
+      fullPath: '/network/construction'
+      preLoaderRoute: typeof NetworkConstructionRouteImport
+      parentRoute: typeof NetworkRoute
     }
     '/business/project-works': {
       id: '/business/project-works'
@@ -425,24 +539,35 @@ const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
   BusinessRouteChildren,
 )
 
+interface NetworkRouteChildren {
+  NetworkConstructionRoute: typeof NetworkConstructionRoute
+  NetworkGreenEnergyRoute: typeof NetworkGreenEnergyRoute
+  NetworkInfrastructureRoute: typeof NetworkInfrastructureRoute
+  NetworkLandTransportRoute: typeof NetworkLandTransportRoute
+  NetworkOilGasRoute: typeof NetworkOilGasRoute
+  NetworkPowerGenerationRoute: typeof NetworkPowerGenerationRoute
+}
+
+const NetworkRouteChildren: NetworkRouteChildren = {
+  NetworkConstructionRoute: NetworkConstructionRoute,
+  NetworkGreenEnergyRoute: NetworkGreenEnergyRoute,
+  NetworkInfrastructureRoute: NetworkInfrastructureRoute,
+  NetworkLandTransportRoute: NetworkLandTransportRoute,
+  NetworkOilGasRoute: NetworkOilGasRoute,
+  NetworkPowerGenerationRoute: NetworkPowerGenerationRoute,
+}
+
+const NetworkRouteWithChildren =
+  NetworkRoute._addFileChildren(NetworkRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRouteWithChildren,
   BusinessRoute: BusinessRouteWithChildren,
   ContactRoute: ContactRoute,
-  NetworkRoute: NetworkRoute,
+  NetworkRoute: NetworkRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

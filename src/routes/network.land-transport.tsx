@@ -1,0 +1,50 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PageLayout } from "@/components/PageLayout";
+import { PageNav, networkLinks } from "@/components/PageNav";
+import hero from "@/assets/ind-lta.jpg";
+
+export const Route = createFileRoute("/network/land-transport")({
+  head: () => ({
+    meta: [
+      { title: "Land Transport Authority — Industries We Serve | AtS" },
+      { name: "description", content: "Civil works, road maintenance and repair services supporting transport infrastructure development." },
+    ],
+  }),
+  component: Page,
+});
+
+const capabilities = [
+  ["Civil Works", "Civil construction for transport infrastructure and associated facilities."],
+  ["Road Maintenance", "Scheduled maintenance programmes that keep roads safe and serviceable."],
+  ["Repair Services", "Reactive repair works for road surfaces, drainage and roadside assets."],
+  ["Traffic Management", "Safe traffic management arrangements for live carriageway works."],
+];
+
+function Page() {
+  return (
+    <PageLayout
+      eyebrow="Global Network · Sector"
+      title="Land Transport Authority"
+      subtitle="Supporting transport infrastructure development through civil works, road maintenance and repair services."
+      nav={<PageNav title="Global Network" links={networkLinks} currentPath="/network/land-transport" />}
+    >
+      <div className="overflow-hidden rounded-sm border border-black/14">
+        <img src={hero} alt="Land transport works" className="h-64 w-full object-cover grayscale" />
+      </div>
+      <div className="lp-prose mt-6">
+        <p>
+          AtS supports transport authorities and contractors with civil, maintenance and repair
+          services delivered to Singapore&apos;s public works standards.
+        </p>
+      </div>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        {capabilities.map(([t, b]) => (
+          <div key={t} className="lp-card">
+            <h3 className="lp-h text-base">{t}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-black/65">{b}</p>
+          </div>
+        ))}
+      </div>
+    </PageLayout>
+  );
+}

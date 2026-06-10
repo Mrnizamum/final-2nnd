@@ -73,6 +73,16 @@ export const businessLinks: readonly SidebarLink[] = [
   { to: "/business/partnership", label: "Core Partnership Services" },
 ];
 
+export const networkLinks: readonly SidebarLink[] = [
+  { to: "/network", label: "Industries Overview" },
+  { to: "/network/infrastructure", label: "Infrastructure" },
+  { to: "/network/oil-gas", label: "Oil & Gas" },
+  { to: "/network/green-energy", label: "Green Energy" },
+  { to: "/network/power-generation", label: "Power Generation" },
+  { to: "/network/construction", label: "Construction" },
+  { to: "/network/land-transport", label: "Land Transport Authority" },
+];
+
 export const siteLinks: readonly SidebarLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
