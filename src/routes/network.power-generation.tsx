@@ -23,10 +23,10 @@ const capabilities = [
 function Page() {
   return (
     <PageLayout
-      eyebrow="Global Network · Sector"
+      eyebrow="Field of Business · Sector"
       title="Power Generation"
       subtitle="Supporting uninterrupted power production through dependable plant maintenance and turnaround services."
-      nav={<PageNav title="Global Network" links={networkLinks} currentPath="/network/power-generation" />}
+      nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/power-generation" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
         <img src={hero} alt="Power generation plant" className="h-64 w-full object-cover grayscale" />

@@ -23,10 +23,10 @@ const capabilities = [
 function Page() {
   return (
     <PageLayout
-      eyebrow="Global Network · Sector"
+      eyebrow="Field of Business · Sector"
       title="Oil & Gas"
       subtitle="Integrated EPC, construction, piping, mechanical and maintenance services for oil & gas facilities, refineries, terminals and process plants."
-      nav={<PageNav title="Global Network" links={networkLinks} currentPath="/network/oil-gas" />}
+      nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/oil-gas" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
         <img src={hero} alt="Oil & gas storage tanks" className="h-64 w-full object-cover grayscale" />

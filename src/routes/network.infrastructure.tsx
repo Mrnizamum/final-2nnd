@@ -23,10 +23,10 @@ const capabilities = [
 function Page() {
   return (
     <PageLayout
-      eyebrow="Global Network · Sector"
+      eyebrow="Field of Business · Sector"
       title="Infrastructure"
       subtitle="Comprehensive infrastructure solutions — road works, civil construction, repair, maintenance and public facility upgrading projects."
-      nav={<PageNav title="Global Network" links={networkLinks} currentPath="/network/infrastructure" />}
+      nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/infrastructure" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
         <img src={hero} alt="Infrastructure works" className="h-64 w-full object-cover grayscale" />
