@@ -38,7 +38,7 @@ const nav: NavItem[] = [
     ],
   },
   { label: "Our Business", to: "/business" },
-  { label: "Global Network", to: "/network" },
+  { label: "Field of Business", to: "/network" },
   { label: "Contact Us", to: "/contact" },
 ];
 

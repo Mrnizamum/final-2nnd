@@ -87,6 +87,6 @@ export const siteLinks: readonly SidebarLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/business", label: "Our Business" },
-  { to: "/network", label: "Global Network" },
+  { to: "/network", label: "Field of Business" },
   { to: "/contact", label: "Contact Us" },
 ];

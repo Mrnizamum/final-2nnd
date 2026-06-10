@@ -12,7 +12,7 @@ import heroTanks from "@/assets/hero-tanks.jpg";
 export const Route = createFileRoute("/network")({
   head: () => ({
     meta: [
-      { title: "Global Network — Industries We Serve | AtS" },
+      { title: "Field of Business — Industries We Serve | AtS" },
       { name: "description", content: "Industries served by AtS: infrastructure, oil & gas, green energy, power generation, construction and Land Transport Authority works." },
     ],
   }),
@@ -31,10 +31,10 @@ const fields = [
 function Network() {
   return (
     <PageLayout
-      eyebrow="Global Network · Industries"
+      eyebrow="Field of Business · Industries"
       title="Industries we serve across the region."
       subtitle="From oil & gas and infrastructure to green energy, power generation and transport — AtS supports the industries that keep Singapore and the region moving."
-      nav={<PageNav title="Global Network" links={networkLinks} currentPath="/network" />}
+      nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network" />}
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {fields.map((f) => (
