@@ -28,8 +28,8 @@ const scope = [
 function Maintenance() {
   return (
     <PageLayout
-      eyebrow="Our Business · Maintenance"
-      title="Plant Maintenance for refineries and process facilities."
+      eyebrow="OUR SERVICES"
+      title="Plant Maintenance Works"
       subtitle="Asset integrity, minimum downtime and improved operational efficiency through structured maintenance services."
       nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business/maintenance" />}
     >
