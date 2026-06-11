@@ -7,7 +7,7 @@ import bizMaintenance from "@/assets/biz-maintenance.jpg";
 import bizScaffold from "@/assets/biz-scaffold.jpg";
 import indConstruction from "@/assets/ind-construction.jpg";
 
-export const Route = createFileRoute("/business")({
+export const Route = createFileRoute("/business/")({
   head: () => ({
     meta: [
       { title: "Our Business — Services Overview | AtS Construction & Engineering" },

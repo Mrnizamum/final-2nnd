@@ -9,7 +9,7 @@ import indLta from "@/assets/ind-lta.jpg";
 import bizMaintenance from "@/assets/biz-maintenance.jpg";
 import heroTanks from "@/assets/hero-tanks.jpg";
 
-export const Route = createFileRoute("/network")({
+export const Route = createFileRoute("/network/")({
   head: () => ({
     meta: [
       { title: "Field of Business — Industries We Serve | AtS" },
