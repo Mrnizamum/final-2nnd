@@ -39,9 +39,9 @@ const cards = [
 function Strengths() {
   return (
     <PageLayout
-      eyebrow="About Us · Operational Strengths"
-      title="People, resources, technology — the foundations of reliable execution."
-      subtitle="The combination of capability, experience, equipment and digital practice that lets us deliver complex industrial projects with confidence."
+      eyebrow="ABOUT US "
+      title="Our Strengths"
+      subtitle=""
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about/strengths" />}
     >
       <div className="grid gap-4 sm:grid-cols-2">

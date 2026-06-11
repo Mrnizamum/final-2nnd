@@ -54,7 +54,7 @@ export const aboutLinks: readonly SidebarLink[] = [
   { to: "/about/governance", label: "Governance, Ethics & Compliance" },
   { to: "/about/leadership", label: "Leadership & Management Approach" },
   { to: "/about/commitment", label: "Our Commitment" },
-  { to: "/about/strengths", label: "Operational Strengths" },
+  { to: "/about/strengths", label: "Our Strengths" },
 ];
 
 export const commitmentLinks: readonly SidebarLink[] = [
