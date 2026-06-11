@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as NetworkRouteImport } from './routes/network'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BusinessRouteImport } from './routes/business'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NetworkIndexRouteImport } from './routes/network.index'
 import { Route as BusinessIndexRouteImport } from './routes/business.index'
@@ -39,9 +42,24 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NetworkRoute = NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessRoute = BusinessRouteImport.update({
+  id: '/business',
+  path: '/business',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -50,19 +68,19 @@ const IndexRoute = IndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const NetworkIndexRoute = NetworkIndexRouteImport.update({
-  id: '/network/',
-  path: '/network/',
-  getParentRoute: () => rootRouteImport,
+  id: '/',
+  path: '/',
+  getParentRoute: () => NetworkRoute,
 } as any)
 const BusinessIndexRoute = BusinessIndexRouteImport.update({
-  id: '/business/',
-  path: '/business/',
-  getParentRoute: () => rootRouteImport,
+  id: '/',
+  path: '/',
+  getParentRoute: () => BusinessRoute,
 } as any)
 const AboutIndexRoute = AboutIndexRouteImport.update({
-  id: '/about/',
-  path: '/about/',
-  getParentRoute: () => rootRouteImport,
+  id: '/',
+  path: '/',
+  getParentRoute: () => AboutRoute,
 } as any)
 const NetworkPowerGenerationRoute = NetworkPowerGenerationRouteImport.update({
   id: '/power-generation',
@@ -157,7 +175,10 @@ const AboutClientRoute = AboutClientRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -210,7 +231,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRouteWithChildren
+  '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -238,7 +262,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/business'
     | '/contact'
+    | '/network'
     | '/sitemap.xml'
     | '/about/client'
     | '/about/commitment'
@@ -290,7 +317,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/business'
     | '/contact'
+    | '/network'
     | '/sitemap.xml'
     | '/about/client'
     | '/about/commitment'
@@ -317,11 +347,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRouteWithChildren
+  BusinessRoute: typeof BusinessRouteWithChildren
   ContactRoute: typeof ContactRoute
+  NetworkRoute: typeof NetworkRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  AboutIndexRoute: typeof AboutIndexRoute
-  BusinessIndexRoute: typeof BusinessIndexRoute
-  NetworkIndexRoute: typeof NetworkIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -333,11 +363,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/network': {
+      id: '/network'
+      path: '/network'
+      fullPath: '/network'
+      preLoaderRoute: typeof NetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business': {
+      id: '/business'
+      path: '/business'
+      fullPath: '/business'
+      preLoaderRoute: typeof BusinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -349,24 +400,24 @@ declare module '@tanstack/react-router' {
     }
     '/network/': {
       id: '/network/'
-      path: '/network'
+      path: '/'
       fullPath: '/network/'
       preLoaderRoute: typeof NetworkIndexRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof NetworkRoute
     }
     '/business/': {
       id: '/business/'
-      path: '/business'
+      path: '/'
       fullPath: '/business/'
       preLoaderRoute: typeof BusinessIndexRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof BusinessRoute
     }
     '/about/': {
       id: '/about/'
-      path: '/about'
+      path: '/'
       fullPath: '/about/'
       preLoaderRoute: typeof AboutIndexRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof AboutRoute
     }
     '/network/power-generation': {
       id: '/network/power-generation'
@@ -497,13 +548,82 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AboutRouteChildren {
+  AboutClientRoute: typeof AboutClientRoute
+  AboutCommitmentRoute: typeof AboutCommitmentRoute
+  AboutDeliveryRoute: typeof AboutDeliveryRoute
+  AboutGovernanceRoute: typeof AboutGovernanceRoute
+  AboutHsseRoute: typeof AboutHsseRoute
+  AboutLeadershipRoute: typeof AboutLeadershipRoute
+  AboutQualityRoute: typeof AboutQualityRoute
+  AboutStrengthsRoute: typeof AboutStrengthsRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+}
+
+const AboutRouteChildren: AboutRouteChildren = {
+  AboutClientRoute: AboutClientRoute,
+  AboutCommitmentRoute: AboutCommitmentRoute,
+  AboutDeliveryRoute: AboutDeliveryRoute,
+  AboutGovernanceRoute: AboutGovernanceRoute,
+  AboutHsseRoute: AboutHsseRoute,
+  AboutLeadershipRoute: AboutLeadershipRoute,
+  AboutQualityRoute: AboutQualityRoute,
+  AboutStrengthsRoute: AboutStrengthsRoute,
+  AboutIndexRoute: AboutIndexRoute,
+}
+
+const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
+
+interface BusinessRouteChildren {
+  BusinessConstructionRoute: typeof BusinessConstructionRoute
+  BusinessMaintenanceRoute: typeof BusinessMaintenanceRoute
+  BusinessPartnershipRoute: typeof BusinessPartnershipRoute
+  BusinessProjectWorksRoute: typeof BusinessProjectWorksRoute
+  BusinessIndexRoute: typeof BusinessIndexRoute
+}
+
+const BusinessRouteChildren: BusinessRouteChildren = {
+  BusinessConstructionRoute: BusinessConstructionRoute,
+  BusinessMaintenanceRoute: BusinessMaintenanceRoute,
+  BusinessPartnershipRoute: BusinessPartnershipRoute,
+  BusinessProjectWorksRoute: BusinessProjectWorksRoute,
+  BusinessIndexRoute: BusinessIndexRoute,
+}
+
+const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
+  BusinessRouteChildren,
+)
+
+interface NetworkRouteChildren {
+  NetworkConstructionRoute: typeof NetworkConstructionRoute
+  NetworkGreenEnergyRoute: typeof NetworkGreenEnergyRoute
+  NetworkInfrastructureRoute: typeof NetworkInfrastructureRoute
+  NetworkLandTransportRoute: typeof NetworkLandTransportRoute
+  NetworkOilGasRoute: typeof NetworkOilGasRoute
+  NetworkPowerGenerationRoute: typeof NetworkPowerGenerationRoute
+  NetworkIndexRoute: typeof NetworkIndexRoute
+}
+
+const NetworkRouteChildren: NetworkRouteChildren = {
+  NetworkConstructionRoute: NetworkConstructionRoute,
+  NetworkGreenEnergyRoute: NetworkGreenEnergyRoute,
+  NetworkInfrastructureRoute: NetworkInfrastructureRoute,
+  NetworkLandTransportRoute: NetworkLandTransportRoute,
+  NetworkOilGasRoute: NetworkOilGasRoute,
+  NetworkPowerGenerationRoute: NetworkPowerGenerationRoute,
+  NetworkIndexRoute: NetworkIndexRoute,
+}
+
+const NetworkRouteWithChildren =
+  NetworkRoute._addFileChildren(NetworkRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRouteWithChildren,
+  BusinessRoute: BusinessRouteWithChildren,
   ContactRoute: ContactRoute,
+  NetworkRoute: NetworkRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  AboutIndexRoute: AboutIndexRoute,
-  BusinessIndexRoute: BusinessIndexRoute,
-  NetworkIndexRoute: NetworkIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
