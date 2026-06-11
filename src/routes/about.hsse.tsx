@@ -26,7 +26,7 @@ function Hsse() {
     <PageLayout
       eyebrow="About · Our Commitment"
       title="HSSE Philosophy"
-      subtitle="Health, Safety, Security & Environment performance is a fundamental priority and a critical factor in the successful delivery of every project."
+      subtitle=""
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/hsse" />}
     >
       <div className="lp-prose">
