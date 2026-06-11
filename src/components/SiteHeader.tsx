@@ -104,6 +104,7 @@ export function SiteHeader() {
                 style={{ imageRendering: "auto" }}
               />
             </Link>
+            <div className="ml-auto flex items-stretch">
             {nav.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
@@ -171,6 +172,7 @@ export function SiteHeader() {
                 </Link>
               )
             )}
+            </div>
           </nav>
         </div>
 
