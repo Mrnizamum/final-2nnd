@@ -24,7 +24,7 @@ function Delivery() {
     <PageLayout
       eyebrow="About · Our Commitment"
       title="Timely Delivery Assurance"
-      subtitle="Meeting project schedules where delays significantly impact operations and costs."
+      subtitle=""
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/delivery" />}
     >
       <div className="lp-prose">
