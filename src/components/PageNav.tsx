@@ -16,7 +16,7 @@ export function PageNav({
     <nav className="overflow-hidden rounded-sm border border-white/15 bg-black/45 shadow-xl shadow-black/30 backdrop-blur-md">
       <div className="border-b border-white/10 px-5 py-4">
         <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-          {title}
+          {title === "Our Business" ? "Our Services " : title === "Our Assurance" ? "Our Commitment" : title}
         </h2>
       </div>
       <ul className="p-2">
@@ -57,7 +57,7 @@ export const aboutLinks: readonly SidebarLink[] = [
   { to: "/about/strengths", label: "Operational Strengths" },
 ];
 
-export const assuranceLinks: readonly SidebarLink[] = [
+export const commitmentLinks: readonly SidebarLink[] = [
   { to: "/about/commitment", label: "Our Commitment — Overview" },
   { to: "/about/hsse", label: "HSSE Philosophy" },
   { to: "/about/quality", label: "Quality Assurance" },
@@ -86,7 +86,7 @@ export const networkLinks: readonly SidebarLink[] = [
 export const siteLinks: readonly SidebarLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/business", label: "Our Services" },
+  { to: "/business", label: "Our Services " },
   { to: "/network", label: "Field of Business" },
   { to: "/contact", label: "Contact Us" },
 ];

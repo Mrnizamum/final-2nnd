@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, Gauge, Clock, HeartHandshake, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import { PageNav, assuranceLinks } from "@/components/PageNav";
+import { PageNav, commitmentLinks } from "@/components/PageNav";
 
 export const Route = createFileRoute("/about/commitment")({
   head: () => ({
     meta: [
-      { title: "Our Assurance — HSSE, Quality, Delivery & Client Satisfaction" },
+      { title: "Our Commitment — HSSE, Quality, Delivery & Client Satisfaction" },
       { name: "description", content: "Our HSSE philosophy, quality assurance, timely delivery and client satisfaction commitments." },
     ],
   }),
@@ -24,10 +24,10 @@ const items = [
 function Commitment() {
   return (
     <PageLayout
-      eyebrow="About Us · Our Assurance"
-      title="Our Assurance to safety, quality, delivery and client success."
+      eyebrow="About Us · Our Commitment"
+      title="Our Commitment to safety, quality, delivery and client success."
       subtitle="Four pillars that define how we work and how we deliver — every project, every site, every day."
-      nav={<PageNav title="Our Assurance" links={assuranceLinks} currentPath="/about/commitment" />}
+      nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/commitment" />}
     >
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((it) => (

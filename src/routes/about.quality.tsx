@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import { PageNav, assuranceLinks } from "@/components/PageNav";
+import { PageNav, commitmentLinks } from "@/components/PageNav";
 
 export const Route = createFileRoute("/about/quality")({
   head: () => ({
@@ -24,10 +24,10 @@ const stages = [
 function Quality() {
   return (
     <PageLayout
-      eyebrow="About · Our Assurance"
+      eyebrow="About · Our Commitment"
       title="Quality Assurance"
       subtitle="A core principle at AtS and an integral part of our project execution strategy."
-      nav={<PageNav title="Our Assurance" links={assuranceLinks} currentPath="/about/quality" />}
+      nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/quality" />}
     >
       <div className="lp-prose">
         <p>

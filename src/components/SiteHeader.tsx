@@ -25,7 +25,7 @@ const nav: NavItem[] = [
       { label: "Governance, Ethics & Compliance", to: "/about/governance" },
       { label: "Leadership & Management Approach", to: "/about/leadership" },
       {
-          label: "Our Commitment",
+        label: "Our Commitment",
         to: "/about/commitment",
         children: [
           { label: "HSSE Philosophy", to: "/about/hsse" },
@@ -38,7 +38,7 @@ const nav: NavItem[] = [
     ],
   },
   {
-      label: "Our Services",
+    label: "Our Services ",
     to: "/business",
     children: [
       { label: "Project Works (EPC Mechanical)", to: "/business/project-works" },

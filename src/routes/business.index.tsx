@@ -10,7 +10,7 @@ import indConstruction from "@/assets/ind-construction.jpg";
 export const Route = createFileRoute("/business/")({
   head: () => ({
     meta: [
-      { title: "Our Business — Services Overview | AtS Construction & Engineering" },
+      { title: "Our Services  — Services Overview | AtS Construction & Engineering" },
       { name: "description", content: "EPC mechanical, general construction, plant maintenance and core partnership services for industrial facilities." },
     ],
   }),
@@ -30,7 +30,7 @@ function Business() {
       eyebrow="Our Services · Overview"
       title="Integrated engineering, construction and industrial support services."
       subtitle="A comprehensive range of services for the oil & gas, petrochemical, refinery and infrastructure sectors — delivered safely, reliably and on schedule."
-      nav={<PageNav title="Our Services" links={businessLinks} currentPath="/business" />}
+      nav={<PageNav title="Our Services " links={businessLinks} currentPath="/business" />}
     >
       <div className="lp-prose">
         <p>
