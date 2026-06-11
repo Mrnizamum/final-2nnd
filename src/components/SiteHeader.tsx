@@ -70,16 +70,16 @@ export function SiteHeader() {
   const isHome = router.state.location.pathname === "/";
 
   const headerClasses = isHome
-    ? "absolute top-0 z-50 w-full bg-gradient-to-b from-black/40 to-transparent"
+    ? "absolute top-0 z-50 w-full"
     : "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
 
   const navContainerClasses = isHome
-    ? "flex w-full items-stretch overflow-visible rounded-sm bg-black/30 backdrop-blur-sm shadow-lg shadow-black/20"
-    : "flex w-full items-stretch overflow-visible rounded-sm bg-[#f5f5f5] shadow-sm";
+    ? "flex w-full items-stretch overflow-visible rounded-xl bg-black/35 backdrop-blur-md shadow-lg shadow-black/20 ring-1 ring-white/10"
+    : "flex w-full items-stretch overflow-visible rounded-xl bg-[#f5f5f5] shadow-sm";
 
   const logoClasses = isHome
-    ? "flex items-center px-4 py-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-sm"
-    : "flex items-center px-4 py-2 bg-white border-r border-black/10";
+    ? "flex items-center px-4 py-2"
+    : "flex items-center px-4 py-2 bg-white border-r border-black/10 rounded-l-xl";
 
   const activeItem = isHome ? "bg-white/20 text-white" : "bg-[#1e40af] text-white";
   const inactiveItem = isHome
