@@ -34,7 +34,7 @@ const nav: NavItem[] = [
           { label: "Client Satisfaction", to: "/about/client" },
         ],
       },
-      { label: "Operational Strengths", to: "/about/strengths" },
+      { label: "Our Strengths", to: "/about/strengths" },
     ],
   },
   {
