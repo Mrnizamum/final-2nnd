@@ -42,7 +42,7 @@ function Home() {
 
   return (
     <>
-    <section className="relative isolate h-[85vh] min-h-[600px] w-full overflow-hidden bg-black">
+    <section className="relative isolate h-[70vh] min-h-[480px] w-full overflow-hidden bg-black">
       {slides.map((src, i) => (
         <img
           key={src}
