@@ -17,9 +17,9 @@ export const Route = createFileRoute("/business/construction")({
 function Construction() {
   return (
     <PageLayout
-      eyebrow="Our Business · Construction"
+      eyebrow="OUR SERVICES"
       title="General Construction Works"
-      subtitle="Industrial, commercial and infrastructure construction delivered with strong technical capability and experienced project execution teams."
+      subtitle=""
       nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business/construction" />}
     >
       <img src={indConstruction} alt="Construction site with cranes" loading="lazy" className="lp-image mb-8" />
