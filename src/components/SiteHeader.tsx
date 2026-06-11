@@ -1,4 +1,4 @@
-import { Link, useRouter } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
@@ -66,9 +66,6 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
-  const router = useRouter();
-  void router;
-
   const headerClasses =
     "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
 
