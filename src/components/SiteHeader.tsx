@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
@@ -66,14 +66,37 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
+  const router = useRouter();
+  const isHome = router.state.location.pathname === "/";
+
+  const headerClasses = isHome
+    ? "absolute top-0 z-50 w-full bg-transparent"
+    : "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
+
+  const navContainerClasses = isHome
+    ? "flex w-full items-stretch overflow-visible rounded-sm bg-transparent"
+    : "flex w-full items-stretch overflow-visible rounded-sm bg-[#f5f5f5] shadow-sm";
+
+  const logoClasses = isHome
+    ? "flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20"
+    : "flex items-center px-4 py-2 bg-white border-r border-black/10";
+
+  const activeItem = isHome ? "bg-white/20 text-white" : "bg-[#1e40af] text-white";
+  const inactiveItem = isHome
+    ? "text-white hover:bg-white/10"
+    : "text-[#3A3A3A] hover:bg-black/5";
+
+  const mobileBtnClasses = isHome
+    ? "rounded-md border border-white/20 bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+    : "rounded-md border border-black/20 bg-white p-2 text-[#3A3A3A] transition-colors hover:bg-black/5";
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10">
+    <header className={headerClasses}>
       <div className="container-x flex items-center justify-between gap-6 py-2">
         {/* Desktop Nav with integrated logo */}
         <div className="hidden w-full items-center lg:flex">
-          <nav className="flex w-full items-stretch overflow-visible rounded-sm bg-[#f5f5f5] shadow-sm">
-            <Link to="/" className="flex items-center px-4 py-2 bg-white border-r border-black/10">
+          <nav className={navContainerClasses}>
+            <Link to="/" className={logoClasses}>
               <img
                 src={logoAsset.url}
                 alt="AtS Construction & Engineering"
@@ -86,8 +109,8 @@ export function SiteHeader() {
                 <div key={item.label} className="group relative">
                   <Link
                     to={item.to}
-                    activeProps={{ className: "bg-[#1e40af] text-white" }}
-                    inactiveProps={{ className: "text-[#3A3A3A] group-hover:bg-black/5" }}
+                    activeProps={{ className: activeItem }}
+                    inactiveProps={{ className: inactiveItem }}
                     className="flex h-full items-center gap-1 px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
                   >
                     {item.label}
@@ -139,8 +162,8 @@ export function SiteHeader() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  activeProps={{ className: "bg-[#1e40af] text-white" }}
-                  inactiveProps={{ className: "text-[#3A3A3A] hover:bg-black/5" }}
+                  activeProps={{ className: activeItem }}
+                  inactiveProps={{ className: inactiveItem }}
                   activeOptions={{ exact: item.to === "/" }}
                   className="flex h-full items-center px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
                 >
@@ -161,7 +184,7 @@ export function SiteHeader() {
         </Link>
         <button
           onClick={() => setOpen((v) => !v)}
-          className="rounded-md border border-black/20 bg-white p-2 text-[#3A3A3A] transition-colors hover:bg-black/5 lg:hidden"
+          className={mobileBtnClasses}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
