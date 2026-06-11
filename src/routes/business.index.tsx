@@ -27,10 +27,10 @@ const services = [
 function Business() {
   return (
     <PageLayout
-      eyebrow="Our Business · Overview"
+      eyebrow="Our Services · Overview"
       title="Integrated engineering, construction and industrial support services."
       subtitle="A comprehensive range of services for the oil & gas, petrochemical, refinery and infrastructure sectors — delivered safely, reliably and on schedule."
-      nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business" />}
+      nav={<PageNav title="Our Services" links={businessLinks} currentPath="/business" />}
     >
       <div className="lp-prose">
         <p>

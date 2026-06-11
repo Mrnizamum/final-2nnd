@@ -31,27 +31,33 @@ const fields = [
 function Network() {
   return (
     <PageLayout
-      eyebrow="Field of Business · Industries"
-      title="Industries we serve across the region."
-      subtitle="From oil & gas and infrastructure to green energy, power generation and transport — AtS supports the industries that keep Singapore and the region moving."
+      eyebrow="Field of Business"
+      title="Industries we serve"
+      subtitle="Specialised engineering and construction support across Singapore's most demanding industrial sectors."
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network" />}
     >
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {fields.map((f) => (
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {fields.map((f, i) => (
           <Link
             key={f.title}
             to={f.to}
-            className="group relative block h-64 overflow-hidden rounded-sm border border-black/14"
+            className="group relative flex flex-col overflow-hidden rounded-md border border-black/10 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[#1e40af]/40 hover:shadow-xl"
           >
-            <img src={f.img} alt={f.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/95 via-[#1a1a1a]/45 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-5">
-              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80">Sector</div>
-              <h3 className="mt-1 font-display text-xl font-bold text-white">{f.title}</h3>
-              <p className="mt-2 max-h-0 overflow-hidden text-[13px] leading-relaxed text-white/90 opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
-                {f.body}
-              </p>
-              <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-white opacity-0 transition group-hover:opacity-100">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img
+                src={f.img}
+                alt={f.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute left-3 top-3 rounded-sm bg-[#ef6c1a] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+            </div>
+            <div className="flex flex-1 flex-col border-t-2 border-[#1e40af] p-5">
+              <h3 className="font-display text-lg font-bold text-[#1e40af]">{f.title}</h3>
+              <p className="mt-2 flex-1 text-[13px] leading-relaxed text-black/65">{f.body}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-[#ef6c1a] transition group-hover:gap-2">
                 Explore <ArrowRight className="h-3.5 w-3.5" />
               </span>
             </div>
