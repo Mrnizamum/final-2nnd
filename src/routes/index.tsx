@@ -179,7 +179,7 @@ function Home() {
         {/* Our Business */}
         <div>
           <h2 className="font-display text-xl font-semibold text-[#1e40af] md:text-2xl">
-            Our Business
+            Our Services
           </h2>
           <div className="mt-3 h-px w-full bg-border" />
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
