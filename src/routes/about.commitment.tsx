@@ -36,7 +36,7 @@ function Commitment() {
               <div className="lp-icon h-11 w-11">
                 <it.icon className="h-5 w-5" />
               </div>
-              <h3 className="lp-h text-base">{it.title}</h3>
+              <h3 className="lp-h text-base underline decoration-[#1e40af] decoration-2 underline-offset-4">{it.title}</h3>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-black/65">{it.body}</p>
             <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#1a1a1a]">
