@@ -16,7 +16,6 @@ import { Route as BusinessRouteImport } from './routes/business'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as NetworkIndexRouteImport } from './routes/network.index'
 import { Route as BusinessIndexRouteImport } from './routes/business.index'
 import { Route as AboutIndexRouteImport } from './routes/about.index'
 import { Route as NetworkPowerGenerationRouteImport } from './routes/network.power-generation'
@@ -72,11 +71,6 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any)
-const NetworkIndexRoute = NetworkIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => NetworkRoute,
 } as any)
 const BusinessIndexRoute = BusinessIndexRouteImport.update({
   id: '/',
@@ -207,12 +201,12 @@ export interface FileRoutesByFullPath {
   '/network/power-generation': typeof NetworkPowerGenerationRoute
   '/about/': typeof AboutIndexRoute
   '/business/': typeof BusinessIndexRoute
-  '/network/': typeof NetworkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/contact': typeof ContactRoute
+  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -234,7 +228,6 @@ export interface FileRoutesByTo {
   '/network/power-generation': typeof NetworkPowerGenerationRoute
   '/about': typeof AboutIndexRoute
   '/business': typeof BusinessIndexRoute
-  '/network': typeof NetworkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -265,7 +258,6 @@ export interface FileRoutesById {
   '/network/power-generation': typeof NetworkPowerGenerationRoute
   '/about/': typeof AboutIndexRoute
   '/business/': typeof BusinessIndexRoute
-  '/network/': typeof NetworkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -297,12 +289,12 @@ export interface FileRouteTypes {
     | '/network/power-generation'
     | '/about/'
     | '/business/'
-    | '/network/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/admin'
     | '/contact'
+    | '/network'
     | '/sitemap.xml'
     | '/about/client'
     | '/about/commitment'
@@ -324,7 +316,6 @@ export interface FileRouteTypes {
     | '/network/power-generation'
     | '/about'
     | '/business'
-    | '/network'
   id:
     | '__root__'
     | '/'
@@ -354,7 +345,6 @@ export interface FileRouteTypes {
     | '/network/power-generation'
     | '/about/'
     | '/business/'
-    | '/network/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -417,13 +407,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/network/': {
-      id: '/network/'
-      path: '/'
-      fullPath: '/network/'
-      preLoaderRoute: typeof NetworkIndexRouteImport
-      parentRoute: typeof NetworkRoute
     }
     '/business/': {
       id: '/business/'
@@ -621,7 +604,6 @@ interface NetworkRouteChildren {
   NetworkLandTransportRoute: typeof NetworkLandTransportRoute
   NetworkOilGasRoute: typeof NetworkOilGasRoute
   NetworkPowerGenerationRoute: typeof NetworkPowerGenerationRoute
-  NetworkIndexRoute: typeof NetworkIndexRoute
 }
 
 const NetworkRouteChildren: NetworkRouteChildren = {
@@ -631,7 +613,6 @@ const NetworkRouteChildren: NetworkRouteChildren = {
   NetworkLandTransportRoute: NetworkLandTransportRoute,
   NetworkOilGasRoute: NetworkOilGasRoute,
   NetworkPowerGenerationRoute: NetworkPowerGenerationRoute,
-  NetworkIndexRoute: NetworkIndexRoute,
 }
 
 const NetworkRouteWithChildren =
@@ -649,3 +630,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
