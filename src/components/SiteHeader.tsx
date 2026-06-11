@@ -1,4 +1,4 @@
-import { Link, useRouter } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
@@ -66,16 +66,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
-  const router = useRouter();
-  const isHome = router.state.location.pathname === "/";
+  const headerClasses =
+    "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
 
-  const headerClasses = isHome
-    ? "absolute top-0 z-50 w-full"
-    : "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
-
-  const navContainerClasses = isHome
-    ? "flex w-full items-stretch overflow-visible rounded-xl bg-white/95 backdrop-blur-md shadow-lg shadow-black/10 ring-1 ring-black/5"
-    : "flex w-full items-stretch overflow-visible rounded-xl bg-white shadow-sm ring-1 ring-black/5";
+  const navContainerClasses =
+    "flex w-full items-stretch overflow-visible rounded-xl bg-white shadow-sm ring-1 ring-black/5";
 
   const logoClasses = "flex items-center px-4 py-2 bg-white rounded-l-xl";
 
@@ -83,9 +78,8 @@ export function SiteHeader() {
   const inactiveItem =
     "text-[#3A3A3A] hover:bg-[#dbeafe] hover:text-[#1e40af] transition-colors duration-300";
 
-  const mobileBtnClasses = isHome
-    ? "rounded-md border border-white/20 bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-    : "rounded-md border border-black/20 bg-white p-2 text-[#3A3A3A] transition-colors hover:bg-black/5";
+  const mobileBtnClasses =
+    "rounded-md border border-black/20 bg-white p-2 text-[#3A3A3A] transition-colors hover:bg-black/5";
 
   return (
     <header className={headerClasses}>

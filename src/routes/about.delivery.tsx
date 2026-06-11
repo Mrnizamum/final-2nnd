@@ -12,13 +12,6 @@ export const Route = createFileRoute("/about/delivery")({
   component: Delivery,
 });
 
-const approach = [
-  ["Detailed Planning", "Clear scheduling and sequencing of every project phase."],
-  ["Coordination", "Close alignment with clients, suppliers and subcontractors."],
-  ["Resource Optimization", "The right manpower and equipment, deployed efficiently."],
-  ["Progress Monitoring", "Continuous tracking against agreed milestones."],
-];
-
 function Delivery() {
   return (
     <PageLayout
@@ -28,25 +21,7 @@ function Delivery() {
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/delivery" />}
     >
       <div className="lp-prose">
-        <p>
-          We understand the importance of meeting project schedules in the oil &amp; gas,
-          petrochemical and industrial sectors, where delays significantly impact operations and
-          costs. AtS adopts a disciplined project management approach emphasizing detailed planning,
-          coordination, resource optimization and continuous progress monitoring.
-        </p>
-        <p>
-          Our teams work closely with clients, suppliers and subcontractors to ensure smooth
-          workflow and adherence to agreed milestones.
-        </p>
-      </div>
-
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {approach.map(([t, b]) => (
-          <div key={t} className="lp-card">
-            <h3 className="lp-h text-base">{t}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-black/65">{b}</p>
-          </div>
-        ))}
+        <p>Timely Delivery Assurance is a key commitment at AtS Construction &amp; Engineering Pte. Ltd. and a critical measure of our project performance and reliability. We understand the importance of meeting project schedules in the oil &amp; gas, petrochemical, and industrial sectors, where delays can significantly impact operations and costs. AtS adopts a disciplined project management approach that emphasizes detailed planning, effective coordination, resource optimization, and continuous progress monitoring at every stage of execution. Our experienced project teams work closely with clients, suppliers, and subcontractors to ensure smooth workflow, proactive issue resolution, and adherence to agreed milestones. Through strong supervision, efficient execution strategies, and effective communication, we consistently strive to deliver projects on time without compromising safety or quality. AtS is committed to ensuring reliable and predictable project completion, building long-term trust and confidence with our clients through consistent on-schedule performance.</p>
       </div>
     </PageLayout>
   );

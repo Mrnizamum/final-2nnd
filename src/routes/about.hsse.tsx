@@ -12,15 +12,6 @@ export const Route = createFileRoute("/about/hsse")({
   component: Hsse,
 });
 
-const pillars = [
-  ["Policies & Procedures", "A structured HSSE Management System governing every site activity."],
-  ["Training & Toolbox Meetings", "Safety training and daily toolbox briefings for all personnel."],
-  ["Risk Assessment", "Hazard identification and risk assessment before work begins."],
-  ["Incident Reporting", "Reporting and investigation to drive continuous improvement."],
-  ["Subcontractor Control", "Site inspections and oversight of all subcontractors."],
-  ["Emergency Preparedness", "Occupational health and environmental programs on every site."],
-];
-
 function Hsse() {
   return (
     <PageLayout
@@ -30,27 +21,7 @@ function Hsse() {
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/hsse" />}
     >
       <div className="lp-prose">
-        <p>
-          HSSE performance is a fundamental priority at AtS and a critical factor in the successful
-          delivery of every project. AtS adopts a structured HSSE Management System covering
-          policies, safety training, toolbox meetings, incident reporting and investigation, hazard
-          identification and risk assessment, subcontractor control, site inspections, maintenance
-          practices, emergency preparedness and occupational health and environmental programs.
-        </p>
-        <p>
-          We align with <strong>ISO 9001</strong> and <strong>ISO 14001</strong> and target{" "}
-          <strong>BizSAFE Star certification</strong> — the highest level of Singapore&apos;s WSH
-          framework.
-        </p>
-      </div>
-
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {pillars.map(([t, b]) => (
-          <div key={t} className="lp-card">
-            <h3 className="lp-h text-base">{t}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-black/65">{b}</p>
-          </div>
-        ))}
+        <p>Health, Safety, Security &amp; Environment (HSSE) performance is a fundamental priority at AtS Construction &amp; Engineering Pte. Ltd. and a critical factor in the successful delivery of every project. We are fully committed to protecting the health and safety of our employees, clients, subcontractors, and the environment by integrating HSSE into all aspects of our business operations and project execution. AtS adopts a structured HSSE Management System that includes key elements such as HSSE policies and procedures, safety training, toolbox meetings, incident reporting and investigation, hazard identification and risk assessment, subcontractor control, site inspections, maintenance practices, emergency preparedness, and occupational health and environmental protection programs. We continuously promote a strong safety culture through awareness, communication, and strict compliance with applicable regulations and industry standards, while striving for continuous improvement in all HSSE performance areas. AtS is committed to aligning with internationally recognized standards such as ISO 9001 and ISO 14001 as well as achieving and maintaining BizSAFE Star certification, the highest level of Singapore&rsquo;s Workplace Safety and Health (WSH) framework, demonstrating our commitment to strong safety leadership and risk management practices. We believe that strong HSSE performance not only protects lives and the environment but also enhances productivity, efficiency, and long term value for our clients.</p>
       </div>
     </PageLayout>
   );

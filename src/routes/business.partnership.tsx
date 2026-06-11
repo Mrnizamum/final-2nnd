@@ -13,11 +13,11 @@ export const Route = createFileRoute("/business/partnership")({
 });
 
 const services = [
-  { title: "Scaffolding Services", body: "Safe and reliable scaffolding solutions for construction, maintenance and shutdown activities — design support, erection, dismantling, inspection and certification in accordance with WSH requirements." },
-  { title: "Machining Services", body: "On-site and workshop machining including precision machining, flange facing, line boring, drilling and component restoration to minimize downtime and restore equipment efficiently." },
-  { title: "High Torqueing Services", body: "Controlled bolting and high torqueing for flanged joints, equipment assembly and piping systems using calibrated hydraulic torqueing and tensioning equipment." },
-  { title: "Non-Destructive Testing (NDT)", body: "Visual inspection, dye penetrant, magnetic particle and ultrasonic testing to ensure the integrity and safety of materials, welds and structures." },
-  { title: "Equipment Rental Support", body: "Lifting tools, small machinery, torqueing equipment and site support tools — a well-maintained equipment fleet to support smooth project execution." },
+  { title: "Scaffolding Services", body: "We provide safe and reliable scaffolding solutions for construction, maintenance, and shutdown activities. Our services include scaffolding design support, erection, dismantling, inspection, and certification. All scaffolding works are executed in accordance with Workplace Safety and Health (WSH) requirements to ensure safe access and working platforms for all project activities." },
+  { title: "Machining Services", body: "We undertake on-site and workshop machining services to support repair, refurbishment, and modification works. Our capabilities include precision machining, flange facing, line boring, drilling, and component restoration. These services are essential in minimizing downtime and restoring equipment to operational condition efficiently and accurately." },
+  { title: "High Torque Services", body: "AtS provides controlled bolting and high torqueing services for flanged joints, equipment assembly, and piping systems. Using calibrated hydraulic torqueing and tensioning equipment, we ensure accurate bolt loading, leak-free joints, and compliance with project specifications. All torqueing activities are performed by trained technicians following strict safety and quality procedures." },
+  { title: "Non-Destructive Testing (NDT) Services", body: "AtS provides NDT services to ensure the integrity and safety of materials, welds, and structures without causing damage. Our capabilities include visual inspection, dye penetrant testing, magnetic particle testing, ultrasonic testing, and other client-required inspection methods to support quality assurance and compliance standards." },
+  { title: "Equipment Rental Support", body: "We also provide equipment rental support to assist construction and maintenance activities, including lifting tools, small machinery, torqueing equipment, and site support tools. Our well-maintained equipment fleet helps clients improve efficiency, reduce downtime, and ensure smooth project execution." },
 ];
 
 function Partnership() {
@@ -28,15 +28,13 @@ function Partnership() {
       subtitle=""
       nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business/partnership" />}
     >
-      <div className="space-y-4">
-        {services.map((s, i) => (
-          <article key={s.title} className="lp-card grid gap-4 md:grid-cols-[90px_1fr] md:items-start">
-            <div className="lp-num text-4xl md:text-5xl">{String(i + 1).padStart(2, "0")}</div>
-            <div>
-              <h3 className="lp-h text-lg">{s.title}</h3>
-              <p className="mt-2 leading-relaxed text-black/65">{s.body}</p>
-            </div>
-          </article>
+      <div className="lp-prose space-y-6">
+        <p>At AtS Construction &amp; Engineering Pte. Ltd., we also provide a range of specialized industrial support services that complement our EPC, construction, and maintenance capabilities. These services are carried out by trained personnel with strong emphasis on safety, precision, and compliance with industry standards.</p>
+        {services.map((s) => (
+          <div key={s.title}>
+            <h2 className="lp-h text-lg font-bold text-[#1a1a1a]">{s.title}</h2>
+            <p className="mt-2">{s.body}</p>
+          </div>
         ))}
       </div>
     </PageLayout>

@@ -37,11 +37,10 @@ export function SiteFooter() {
           <span className="flex items-center gap-2">
             <Link
               to="/admin"
-              className="font-semibold text-white/80 underline-offset-4 transition hover:text-white hover:underline"
-            >
-              Admin Panel
-            </Link>
-            <span className="inline-block h-2 w-2 rounded-full bg-yellow-400" aria-hidden />
+              aria-label="Admin panel"
+              title="Admin"
+              className="inline-block h-2 w-2 rounded-full bg-yellow-400 transition hover:scale-125"
+            />
             <span>© {new Date().getFullYear()} AtS Construction & Engineering Pte. Ltd. All rights reserved.</span>
           </span>
           <span>Engineering Excellence for Industrial Performance</span>

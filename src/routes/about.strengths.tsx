@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Wrench, Users, Truck, Cpu } from "lucide-react";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, aboutLinks } from "@/components/PageNav";
 
@@ -13,48 +12,46 @@ export const Route = createFileRoute("/about/strengths")({
   component: Strengths,
 });
 
-const cards = [
+const sections = [
   {
-    icon: Wrench,
+    icon: "🔧",
     title: "Our Capabilities",
-    body: "We specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery and industrial sectors.",
+    body: "At AtS Construction & Engineering Pte. Ltd., we specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery, and industrial sectors. This integrated approach allows us to support clients with efficient, reliable, and coordinated execution from planning to completion.",
   },
   {
-    icon: Users,
+    icon: "👷",
     title: "Our People",
-    body: "AtS is led by Executive Directors and senior management with more than 20 years of experience in the oil & gas and chemical terminal industries. Our project managers, engineers and technical specialists bring 15+ years of expertise, supported by continuous training and development.",
+    body: "Our strength lies in our people. AtS is led by Executive Directors and senior management professionals with more than 20 years of experience in the oil & gas and chemical terminal industries. Our team includes experienced project managers, engineers, and technical specialists, many of whom bring over 15 years of industry expertise. We are committed to continuous training and development to ensure our workforce remains skilled, competent, and capable of delivering high quality work in demanding industrial environments. Our people are our key asset, driving performance, safety, and excellence in every project.",
   },
   {
-    icon: Truck,
+    icon: "🏗️",
     title: "Our Resources",
-    body: "We are supported by strong operational resources, including a well-maintained and growing fleet of construction equipment. These resources enable us to execute projects efficiently, handle large-scale requirements and respond quickly to emergency shutdowns and maintenance needs.",
+    body: "AtS is supported by strong operational resources, including a well maintained and growing fleet of construction equipment. These resources enable us to execute projects efficiently, handle large scale requirements, and respond quickly to emergency shutdowns and maintenance needs. Our ability to mobilize equipment and manpower effectively provides a strong advantage in delivering projects on time while maintaining cost efficiency and operational reliability.",
   },
   {
-    icon: Cpu,
+    icon: "💻",
     title: "Our Technology",
-    body: "We adopt modern project management practices supported by advanced digital tools. Structured planning platforms and project control systems improve communication, monitor progress and ensure accurate resource allocation across all sites.",
+    body: "We adopt modern project management practices supported by advanced digital tools and systems to enhance productivity, coordination, and execution efficiency. The use of structured planning platforms and project control systems enables us to improve communication, monitor progress effectively, and ensure accurate resource allocation across all sites. By integrating technology into our operations, AtS strengthens its capability to deliver projects with greater precision, efficiency, and control.",
   },
 ];
 
 function Strengths() {
   return (
     <PageLayout
-      eyebrow="ABOUT US "
+      eyebrow="ABOUT US"
       title="Our Strengths"
       subtitle=""
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about/strengths" />}
     >
-      <div className="grid gap-4 sm:grid-cols-2">
-        {cards.map((c) => (
-          <article key={c.title} className="lp-card">
-            <div className="flex items-center gap-3">
-              <div className="lp-icon h-11 w-11">
-                <c.icon className="h-5 w-5" />
-              </div>
-              <h3 className="lp-h text-base">{c.title}</h3>
-            </div>
-            <p className="mt-4 text-sm leading-relaxed text-black/65">{c.body}</p>
-          </article>
+      <div className="lp-prose space-y-8">
+        {sections.map((s) => (
+          <div key={s.title}>
+            <h2 className="lp-h text-lg">
+              <span className="mr-2">{s.icon}</span>
+              {s.title}
+            </h2>
+            <p className="mt-3">{s.body}</p>
+          </div>
         ))}
       </div>
     </PageLayout>
