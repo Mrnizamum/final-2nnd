@@ -23,9 +23,9 @@ const services = [
 function Partnership() {
   return (
     <PageLayout
-      eyebrow="Our Business · Partnership Services"
-      title="Specialized industrial support, delivered with precision."
-      subtitle="Trained personnel, calibrated equipment and strict compliance with industry standards across every site service."
+      eyebrow="OUR SERVICES"
+      title="Core Partnership Services"
+      subtitle=""
       nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business/partnership" />}
     >
       <div className="space-y-4">
