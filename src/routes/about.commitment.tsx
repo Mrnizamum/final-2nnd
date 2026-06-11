@@ -24,9 +24,9 @@ const items = [
 function Commitment() {
   return (
     <PageLayout
-      eyebrow="About Us · Our Commitment"
-      title="Our Commitment to safety, quality, delivery and client success."
-      subtitle="Four pillars that define how we work and how we deliver — every project, every site, every day."
+      eyebrow="ABOUT US"
+      title="Our Commitment"
+      subtitle=""
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/commitment" />}
     >
       <div className="grid gap-4 sm:grid-cols-2">
