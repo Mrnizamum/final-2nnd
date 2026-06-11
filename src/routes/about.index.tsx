@@ -15,9 +15,9 @@ export const Route = createFileRoute("/about/")({
 function About() {
   return (
     <PageLayout
-      eyebrow="About Us · Corporate Profile"
-      title="A Singapore engineering partner built on decades of industrial expertise."
-      subtitle="Serving the oil & gas, petrochemical, refinery, energy and industrial sectors."
+      eyebrow="ABOUT US ·"
+      title="Corporate Profile"
+      subtitle=""
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about" />}
     >
       <div className="lp-prose max-w-none">
@@ -41,7 +41,7 @@ function About() {
           highest industry standards.
         </p>
         <p>
-          At AtS, we believe that long-term success is built on trust, integrity and performance. We
+          At AtS, we believe that long term success is built on trust, integrity and performance. We
           work closely with our clients to understand their goals and deliver solutions that create
           lasting value. As we continue to grow, our vision is to become a trusted engineering
           partner and preferred service provider for industrial projects across Singapore and the
