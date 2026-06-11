@@ -26,7 +26,7 @@ function Quality() {
     <PageLayout
       eyebrow="About · Our Commitment"
       title="Quality Assurance"
-      subtitle="A core principle at AtS and an integral part of our project execution strategy."
+      subtitle=""
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/quality" />}
     >
       <div className="lp-prose">
