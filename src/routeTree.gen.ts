@@ -15,6 +15,9 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BusinessRouteImport } from './routes/business'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as NetworkIndexRouteImport } from './routes/network.index'
+import { Route as BusinessIndexRouteImport } from './routes/business.index'
+import { Route as AboutIndexRouteImport } from './routes/about.index'
 import { Route as NetworkPowerGenerationRouteImport } from './routes/network.power-generation'
 import { Route as NetworkOilGasRouteImport } from './routes/network.oil-gas'
 import { Route as NetworkLandTransportRouteImport } from './routes/network.land-transport'
@@ -63,6 +66,21 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkIndexRoute = NetworkIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => NetworkRoute,
+} as any)
+const BusinessIndexRoute = BusinessIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BusinessRoute,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AboutRoute,
 } as any)
 const NetworkPowerGenerationRoute = NetworkPowerGenerationRouteImport.update({
   id: '/power-generation',
@@ -180,13 +198,13 @@ export interface FileRoutesByFullPath {
   '/network/land-transport': typeof NetworkLandTransportRoute
   '/network/oil-gas': typeof NetworkOilGasRoute
   '/network/power-generation': typeof NetworkPowerGenerationRoute
+  '/about/': typeof AboutIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/network/': typeof NetworkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRouteWithChildren
-  '/business': typeof BusinessRouteWithChildren
   '/contact': typeof ContactRoute
-  '/network': typeof NetworkRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/about/client': typeof AboutClientRoute
   '/about/commitment': typeof AboutCommitmentRoute
@@ -206,6 +224,9 @@ export interface FileRoutesByTo {
   '/network/land-transport': typeof NetworkLandTransportRoute
   '/network/oil-gas': typeof NetworkOilGasRoute
   '/network/power-generation': typeof NetworkPowerGenerationRoute
+  '/about': typeof AboutIndexRoute
+  '/business': typeof BusinessIndexRoute
+  '/network': typeof NetworkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -233,6 +254,9 @@ export interface FileRoutesById {
   '/network/land-transport': typeof NetworkLandTransportRoute
   '/network/oil-gas': typeof NetworkOilGasRoute
   '/network/power-generation': typeof NetworkPowerGenerationRoute
+  '/about/': typeof AboutIndexRoute
+  '/business/': typeof BusinessIndexRoute
+  '/network/': typeof NetworkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -261,13 +285,13 @@ export interface FileRouteTypes {
     | '/network/land-transport'
     | '/network/oil-gas'
     | '/network/power-generation'
+    | '/about/'
+    | '/business/'
+    | '/network/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
-    | '/business'
     | '/contact'
-    | '/network'
     | '/sitemap.xml'
     | '/about/client'
     | '/about/commitment'
@@ -287,6 +311,9 @@ export interface FileRouteTypes {
     | '/network/land-transport'
     | '/network/oil-gas'
     | '/network/power-generation'
+    | '/about'
+    | '/business'
+    | '/network'
   id:
     | '__root__'
     | '/'
@@ -313,6 +340,9 @@ export interface FileRouteTypes {
     | '/network/land-transport'
     | '/network/oil-gas'
     | '/network/power-generation'
+    | '/about/'
+    | '/business/'
+    | '/network/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -367,6 +397,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/network/': {
+      id: '/network/'
+      path: '/'
+      fullPath: '/network/'
+      preLoaderRoute: typeof NetworkIndexRouteImport
+      parentRoute: typeof NetworkRoute
+    }
+    '/business/': {
+      id: '/business/'
+      path: '/'
+      fullPath: '/business/'
+      preLoaderRoute: typeof BusinessIndexRouteImport
+      parentRoute: typeof BusinessRoute
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof AboutRoute
     }
     '/network/power-generation': {
       id: '/network/power-generation'
@@ -506,6 +557,7 @@ interface AboutRouteChildren {
   AboutLeadershipRoute: typeof AboutLeadershipRoute
   AboutQualityRoute: typeof AboutQualityRoute
   AboutStrengthsRoute: typeof AboutStrengthsRoute
+  AboutIndexRoute: typeof AboutIndexRoute
 }
 
 const AboutRouteChildren: AboutRouteChildren = {
@@ -517,6 +569,7 @@ const AboutRouteChildren: AboutRouteChildren = {
   AboutLeadershipRoute: AboutLeadershipRoute,
   AboutQualityRoute: AboutQualityRoute,
   AboutStrengthsRoute: AboutStrengthsRoute,
+  AboutIndexRoute: AboutIndexRoute,
 }
 
 const AboutRouteWithChildren = AboutRoute._addFileChildren(AboutRouteChildren)
@@ -526,6 +579,7 @@ interface BusinessRouteChildren {
   BusinessMaintenanceRoute: typeof BusinessMaintenanceRoute
   BusinessPartnershipRoute: typeof BusinessPartnershipRoute
   BusinessProjectWorksRoute: typeof BusinessProjectWorksRoute
+  BusinessIndexRoute: typeof BusinessIndexRoute
 }
 
 const BusinessRouteChildren: BusinessRouteChildren = {
@@ -533,6 +587,7 @@ const BusinessRouteChildren: BusinessRouteChildren = {
   BusinessMaintenanceRoute: BusinessMaintenanceRoute,
   BusinessPartnershipRoute: BusinessPartnershipRoute,
   BusinessProjectWorksRoute: BusinessProjectWorksRoute,
+  BusinessIndexRoute: BusinessIndexRoute,
 }
 
 const BusinessRouteWithChildren = BusinessRoute._addFileChildren(
@@ -546,6 +601,7 @@ interface NetworkRouteChildren {
   NetworkLandTransportRoute: typeof NetworkLandTransportRoute
   NetworkOilGasRoute: typeof NetworkOilGasRoute
   NetworkPowerGenerationRoute: typeof NetworkPowerGenerationRoute
+  NetworkIndexRoute: typeof NetworkIndexRoute
 }
 
 const NetworkRouteChildren: NetworkRouteChildren = {
@@ -555,6 +611,7 @@ const NetworkRouteChildren: NetworkRouteChildren = {
   NetworkLandTransportRoute: NetworkLandTransportRoute,
   NetworkOilGasRoute: NetworkOilGasRoute,
   NetworkPowerGenerationRoute: NetworkPowerGenerationRoute,
+  NetworkIndexRoute: NetworkIndexRoute,
 }
 
 const NetworkRouteWithChildren =
