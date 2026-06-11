@@ -103,11 +103,13 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  const isHome = router.state.location.pathname === "/";
   return (
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
-        <main className="flex-1">
+        <main className={`flex-1 ${!isHome ? "pt-16" : ""}`}>
           <Outlet />
         </main>
         <SiteFooter />
