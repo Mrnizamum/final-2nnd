@@ -38,7 +38,7 @@ const nav: NavItem[] = [
     ],
   },
   {
-      label: "Our Services",
+      label: "Our Services ",
     to: "/business",
     children: [
       { label: "Project Works (EPC Mechanical)", to: "/business/project-works" },

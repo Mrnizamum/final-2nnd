@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import { PageNav, assuranceLinks } from "@/components/PageNav";
+import { PageNav, commitmentLinks } from "@/components/PageNav";
 
 export const Route = createFileRoute("/about/hsse")({
   head: () => ({
@@ -24,10 +24,10 @@ const pillars = [
 function Hsse() {
   return (
     <PageLayout
-      eyebrow="About · Our Assurance"
+      eyebrow="About · Our Commitment"
       title="HSSE Philosophy"
       subtitle="Health, Safety, Security & Environment performance is a fundamental priority and a critical factor in the successful delivery of every project."
-      nav={<PageNav title="Our Assurance" links={assuranceLinks} currentPath="/about/hsse" />}
+      nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/hsse" />}
     >
       <div className="lp-prose">
         <p>

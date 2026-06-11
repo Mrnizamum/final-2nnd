@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import { PageNav, assuranceLinks } from "@/components/PageNav";
+import { PageNav, commitmentLinks } from "@/components/PageNav";
 
 export const Route = createFileRoute("/about/delivery")({
   head: () => ({
@@ -22,10 +22,10 @@ const approach = [
 function Delivery() {
   return (
     <PageLayout
-      eyebrow="About · Our Assurance"
+      eyebrow="About · Our Commitment"
       title="Timely Delivery Assurance"
       subtitle="Meeting project schedules where delays significantly impact operations and costs."
-      nav={<PageNav title="Our Assurance" links={assuranceLinks} currentPath="/about/delivery" />}
+      nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/delivery" />}
     >
       <div className="lp-prose">
         <p>
