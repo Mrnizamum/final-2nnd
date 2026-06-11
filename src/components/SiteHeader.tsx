@@ -48,28 +48,27 @@ export function SiteHeader() {
   const [mobileSubExpanded, setMobileSubExpanded] = useState<string | null>(null);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <div className="container-x flex items-center justify-between gap-6 py-3">
-        <Link to="/" className="flex items-center">
-          <img
-            src={logoAsset.url}
-            alt="AtS Construction & Engineering"
-            className="h-14 w-auto object-contain drop-shadow-md md:h-16"
-            style={{ imageRendering: "auto" }}
-          />
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden items-center lg:flex">
-          <nav className="flex items-stretch overflow-visible rounded-sm bg-[#3A3A3A]/85 backdrop-blur-md shadow-lg shadow-black/20">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10">
+      <div className="container-x flex items-center justify-between gap-6 py-2">
+        {/* Desktop Nav with integrated logo */}
+        <div className="hidden w-full items-center lg:flex">
+          <nav className="flex w-full items-stretch overflow-visible rounded-sm bg-[#f5f5f5] shadow-sm">
+            <Link to="/" className="flex items-center px-4 py-2 bg-white border-r border-black/10">
+              <img
+                src={logoAsset.url}
+                alt="AtS Construction & Engineering"
+                className="h-10 w-auto object-contain md:h-12"
+                style={{ imageRendering: "auto" }}
+              />
+            </Link>
             {nav.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
                   <Link
                     to={item.to}
-                    activeProps={{ className: "bg-white text-[#3A3A3A]" }}
-                    inactiveProps={{ className: "text-white group-hover:bg-white/10" }}
-                    className="flex items-center gap-1 px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
+                    activeProps={{ className: "bg-[#1e40af] text-white" }}
+                    inactiveProps={{ className: "text-[#3A3A3A] group-hover:bg-black/5" }}
+                    className="flex h-full items-center gap-1 px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
                   >
                     {item.label}
                     <ChevronDown className="h-3.5 w-3.5" />
