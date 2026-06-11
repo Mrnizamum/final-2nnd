@@ -162,11 +162,12 @@ function Home() {
             <h2 className="font-display text-xl font-semibold md:text-2xl">About Us</h2>
             <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-white/90">
               <p>
-                [About Us content goes here — share the company introduction, history, and key
-                message. Replace this placeholder with the text you'd like displayed.]
-              </p>
-              <p>
-                [Continue the About Us description here with additional paragraphs as needed.]
+                Established in 2025, AtS Construction & Engineering Pte. Ltd. is a
+                Singapore-based engineering and construction company serving the oil & gas,
+                petrochemical, refinery, energy, and industrial sectors. Although newly
+                founded, our company is built upon decades of combined industry experience,
+                technical expertise, and leadership gained through delivering complex
+                projects across various industrial environments.
               </p>
             </div>
             <Link
