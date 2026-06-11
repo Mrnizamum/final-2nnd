@@ -37,8 +37,28 @@ const nav: NavItem[] = [
       { label: "Operational Strengths", to: "/about/strengths" },
     ],
   },
-  { label: "Our Business", to: "/business" },
-  { label: "Field of Business", to: "/network" },
+  {
+    label: "Our Business",
+    to: "/business",
+    children: [
+      { label: "Project Works (EPC Mechanical)", to: "/business/project-works" },
+      { label: "General Construction Works", to: "/business/construction" },
+      { label: "Plant Maintenance Works", to: "/business/maintenance" },
+      { label: "Core Partnership Services", to: "/business/partnership" },
+    ],
+  },
+  {
+    label: "Field of Business",
+    to: "/network",
+    children: [
+      { label: "Infrastructure", to: "/network/infrastructure" },
+      { label: "Oil & Gas", to: "/network/oil-gas" },
+      { label: "Green Energy", to: "/network/green-energy" },
+      { label: "Power Generation", to: "/network/power-generation" },
+      { label: "Construction", to: "/network/construction" },
+      { label: "Land Transport Authority", to: "/network/land-transport" },
+    ],
+  },
   { label: "Contact Us", to: "/contact" },
 ];
 
