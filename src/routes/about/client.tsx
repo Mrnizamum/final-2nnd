@@ -24,7 +24,7 @@ function Client() {
     <PageLayout
       eyebrow="About · Our Commitment"
       title="Client Satisfaction"
-      subtitle="Fundamental at AtS and the basis of our long-term business relationships."
+      subtitle=""
       nav={<PageNav title="Our Commitment" links={commitmentLinks} currentPath="/about/client" />}
     >
       <div className="lp-prose">
