@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain, ShieldCheck, Sparkles, Handshake, Wrench } from "lucide-react";
 import slide1 from "@/assets/hd-slide-1.png.asset.json";
 import slide2 from "@/assets/hd-slide-2.png.asset.json";
 import slide3 from "@/assets/hd-slide-3.png.asset.json";
@@ -107,6 +107,52 @@ function Home() {
             }`}
           />
         ))}
+      </div>
+    </section>
+
+    {/* Quote + values marquee */}
+    <section className="relative overflow-hidden bg-[#fbf6ee] py-14 md:py-20">
+      <div className="container-x text-center">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1e40af]/70">Our Guiding Principle</p>
+        <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[#1a1a1a] md:text-5xl lg:text-6xl">
+          ACHIEVING TIMELINES{" "}
+          <span className="bg-gradient-to-r from-[#7a1f10] via-[#b8341a] to-[#ef6c1a] bg-clip-text text-transparent">
+            SAFELY
+          </span>
+        </h2>
+        <div className="mx-auto mt-4 h-[3px] w-20 bg-[#ef6c1a]" />
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-black/65 md:text-base">
+          Delivering every project on schedule — without ever compromising on the safety of our people, partners and communities.
+        </p>
+      </div>
+
+      <div className="marquee-mask mt-12 overflow-hidden">
+        <div className="marquee-track flex w-max gap-6 md:gap-10">
+          {[...Array(2)].flatMap((_, dup) =>
+            [
+              { icon: HardHat, label: "Passion" },
+              { icon: Users, label: "Teamwork" },
+              { icon: Award, label: "Excellence" },
+              { icon: Mountain, label: "Leadership" },
+              { icon: ShieldCheck, label: "Safety" },
+              { icon: Sparkles, label: "Integrity" },
+              { icon: Handshake, label: "Partnership" },
+              { icon: Wrench, label: "Craftsmanship" },
+            ].map((v) => (
+              <div
+                key={`${dup}-${v.label}`}
+                className="flex w-44 shrink-0 flex-col items-center rounded-lg border border-black/10 bg-white px-4 py-6 shadow-sm md:w-52"
+              >
+                <div className="grid h-16 w-16 place-items-center rounded-md bg-[#fbf6ee]">
+                  <v.icon className="h-8 w-8 text-[#1a1a1a]" strokeWidth={1.25} />
+                </div>
+                <p className="mt-3 font-display text-sm font-bold tracking-wide text-[#1a1a1a]">
+                  {v.label}
+                </p>
+              </div>
+            ))
+          )}
+        </div>
       </div>
     </section>
 
