@@ -154,13 +154,13 @@ function Home() {
       </div>
     </section>
 
-    <section className="bg-white py-10 md:py-14">
-      <div className="container-x grid gap-6 lg:grid-cols-2">
+    <section className="bg-white py-6 md:py-10">
+      <div className="container-x grid gap-5 lg:grid-cols-2">
         {/* About Us */}
         <div className="relative">
-          <div className="bg-[#1e40af] p-6 text-white md:p-8">
-            <h2 className="font-display text-2xl font-semibold md:text-3xl">About Us</h2>
-            <div className="mt-4 space-y-3 text-[13px] leading-relaxed text-white/90 md:text-sm">
+          <div className="bg-[#1e40af] p-5 text-white md:p-6">
+            <h2 className="font-display text-xl font-semibold md:text-2xl">About Us</h2>
+            <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-white/90">
               <p>
                 [About Us content goes here — share the company introduction, history, and key
                 message. Replace this placeholder with the text you'd like displayed.]
@@ -171,21 +171,21 @@ function Home() {
             </div>
             <Link
               to="/about"
-              className="mt-5 inline-flex items-center gap-2 border-b-2 border-white pb-1 text-xs font-semibold uppercase tracking-wider text-white transition hover:text-[#1e40af] hover:border-[#1e40af]"
+              className="mt-4 inline-flex items-center gap-2 border-b-2 border-white pb-1 text-xs font-semibold uppercase tracking-wider text-white transition hover:text-[#1e40af] hover:border-[#1e40af]"
             >
               More +
             </Link>
           </div>
-          <div className="absolute -bottom-3 right-6 h-3 w-24 bg-[#ef6c1a]" />
+          <div className="absolute -bottom-2 right-5 h-2 w-20 bg-[#ef6c1a]" />
         </div>
 
         {/* Our Business */}
         <div>
-          <h2 className="font-display text-2xl font-semibold text-[#1e40af] md:text-3xl">
+          <h2 className="font-display text-xl font-semibold text-[#1e40af] md:text-2xl">
             Our Business
           </h2>
-          <div className="mt-4 h-px w-full bg-border" />
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="mt-3 h-px w-full bg-border" />
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[
               { img: bizProject, title: "Project Works", to: "/business/project-works" },
               { img: bizMaintenance, title: "Maintenance Services", to: "/business/maintenance" },
@@ -200,13 +200,13 @@ function Home() {
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-3 text-sm font-semibold text-foreground group-hover:text-[#1e40af]">
+                <h3 className="mt-2 text-sm font-semibold text-foreground group-hover:text-[#1e40af]">
                   {s.title}
                 </h3>
               </Link>
             ))}
           </div>
-          <div className="mt-8 flex justify-end">
+          <div className="mt-6 flex justify-end">
             <Link
               to="/business"
               className="relative inline-flex items-center gap-2 border-b-2 border-[#1e40af] pb-1 text-sm font-semibold uppercase tracking-wider text-[#1e40af] transition hover:text-[#ef6c1a] hover:border-[#ef6c1a]"
