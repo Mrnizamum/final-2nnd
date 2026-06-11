@@ -24,8 +24,8 @@ const scopes = [
 function ProjectWorks() {
   return (
     <PageLayout
-      eyebrow="Our Business · Project Works"
-      title="EPC mechanical project works for industrial facilities."
+      eyebrow="OUR SERVICES"
+      title="Project Works"
       subtitle="Complete engineering, procurement, fabrication, installation, testing and commissioning of mechanical systems."
       nav={<PageNav title="Our Business" links={businessLinks} currentPath="/business/project-works" />}
     >
