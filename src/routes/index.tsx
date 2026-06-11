@@ -42,7 +42,7 @@ function Home() {
 
   return (
     <>
-    <section className="relative isolate h-[85vh] min-h-[600px] w-full overflow-hidden bg-black">
+    <section className="relative isolate h-[70vh] min-h-[480px] w-full overflow-hidden bg-black">
       {slides.map((src, i) => (
         <img
           key={src}
@@ -111,21 +111,21 @@ function Home() {
     </section>
 
     {/* Quote + values marquee */}
-    <section className="relative overflow-hidden bg-white py-14 md:py-20">
+    <section className="relative overflow-hidden bg-white py-8 md:py-12">
       <div className="container-x text-center">
         <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#ef6c1a]">Our Guiding Principle</p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[#1e40af] md:text-5xl lg:text-6xl">
+        <h2 className="mt-2 font-display text-2xl font-extrabold tracking-tight text-[#1e40af] md:text-4xl lg:text-5xl">
           ACHIEVING TIMELINES{" "}
           <span className="text-[#ef6c1a]">SAFELY</span>
         </h2>
-        <div className="mx-auto mt-4 h-[3px] w-20 bg-[#ef6c1a]" />
-        <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-black/70 md:text-base">
+        <div className="mx-auto mt-3 h-[3px] w-16 bg-[#ef6c1a]" />
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-black/70">
           Delivering every project on schedule — without ever compromising on the safety of our people, partners and communities.
         </p>
       </div>
 
-      <div className="marquee-mask mt-12 overflow-hidden">
-        <div className="marquee-track flex w-max gap-6 md:gap-8">
+      <div className="marquee-mask mt-6 overflow-hidden">
+        <div className="marquee-track flex w-max gap-4 md:gap-6">
           {[...Array(2)].flatMap((_, dup) =>
             [
               { icon: HardHat, label: "Passion" },
@@ -139,12 +139,12 @@ function Home() {
             ].map((v) => (
               <div
                 key={`${dup}-${v.label}`}
-                className="group flex w-44 shrink-0 flex-col items-center rounded-lg border border-[#1e40af]/15 bg-white px-4 py-6 shadow-sm transition hover:border-[#ef6c1a] hover:shadow-md md:w-52"
+                className="group flex w-36 shrink-0 flex-col items-center rounded-lg border border-[#1e40af]/15 bg-white px-3 py-4 shadow-sm transition hover:border-[#ef6c1a] hover:shadow-md md:w-44"
               >
-                <div className="grid h-16 w-16 place-items-center rounded-md bg-[#1e40af] transition group-hover:bg-[#ef6c1a]">
-                  <v.icon className="h-8 w-8 text-white" strokeWidth={1.5} />
+                <div className="grid h-12 w-12 place-items-center rounded-md bg-[#1e40af] transition group-hover:bg-[#ef6c1a]">
+                  <v.icon className="h-6 w-6 text-white" strokeWidth={1.5} />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold tracking-wide text-[#1e40af]">
+                <p className="mt-2 font-display text-xs font-bold tracking-wide text-[#1e40af]">
                   {v.label}
                 </p>
               </div>
@@ -154,13 +154,13 @@ function Home() {
       </div>
     </section>
 
-    <section className="bg-white py-10 md:py-14">
-      <div className="container-x grid gap-6 lg:grid-cols-2">
+    <section className="bg-white py-6 md:py-10">
+      <div className="container-x grid gap-5 lg:grid-cols-2">
         {/* About Us */}
         <div className="relative">
-          <div className="bg-[#1e40af] p-6 text-white md:p-8">
-            <h2 className="font-display text-2xl font-semibold md:text-3xl">About Us</h2>
-            <div className="mt-4 space-y-3 text-[13px] leading-relaxed text-white/90 md:text-sm">
+          <div className="bg-[#1e40af] p-5 text-white md:p-6">
+            <h2 className="font-display text-xl font-semibold md:text-2xl">About Us</h2>
+            <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-white/90">
               <p>
                 [About Us content goes here — share the company introduction, history, and key
                 message. Replace this placeholder with the text you'd like displayed.]
@@ -171,21 +171,21 @@ function Home() {
             </div>
             <Link
               to="/about"
-              className="mt-5 inline-flex items-center gap-2 border-b-2 border-white pb-1 text-xs font-semibold uppercase tracking-wider text-white transition hover:text-[#1e40af] hover:border-[#1e40af]"
+              className="mt-4 inline-flex items-center gap-2 border-b-2 border-white pb-1 text-xs font-semibold uppercase tracking-wider text-white transition hover:text-[#1e40af] hover:border-[#1e40af]"
             >
               More +
             </Link>
           </div>
-          <div className="absolute -bottom-3 right-6 h-3 w-24 bg-[#ef6c1a]" />
+          <div className="absolute -bottom-2 right-5 h-2 w-20 bg-[#ef6c1a]" />
         </div>
 
         {/* Our Business */}
         <div>
-          <h2 className="font-display text-2xl font-semibold text-[#1e40af] md:text-3xl">
+          <h2 className="font-display text-xl font-semibold text-[#1e40af] md:text-2xl">
             Our Business
           </h2>
-          <div className="mt-4 h-px w-full bg-border" />
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="mt-3 h-px w-full bg-border" />
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[
               { img: bizProject, title: "Project Works", to: "/business/project-works" },
               { img: bizMaintenance, title: "Maintenance Services", to: "/business/maintenance" },
@@ -200,13 +200,13 @@ function Home() {
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-3 text-sm font-semibold text-foreground group-hover:text-[#1e40af]">
+                <h3 className="mt-2 text-sm font-semibold text-foreground group-hover:text-[#1e40af]">
                   {s.title}
                 </h3>
               </Link>
             ))}
           </div>
-          <div className="mt-8 flex justify-end">
+          <div className="mt-6 flex justify-end">
             <Link
               to="/business"
               className="relative inline-flex items-center gap-2 border-b-2 border-[#1e40af] pb-1 text-sm font-semibold uppercase tracking-wider text-[#1e40af] transition hover:text-[#ef6c1a] hover:border-[#ef6c1a]"
