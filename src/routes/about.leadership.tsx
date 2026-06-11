@@ -26,9 +26,9 @@ const principles = [
 function Leadership() {
   return (
     <PageLayout
-      eyebrow="About Us · Leadership"
+      eyebrow="ABOUT US"
       title="Leadership & Management Approach"
-      subtitle="Built on disciplined execution, strong leadership and full accountability — committed to delivering safe, efficient, high-quality engineering solutions."
+      subtitle=""
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about/leadership" />}
     >
       <div className="lp-kicker">Seven core principles</div>
