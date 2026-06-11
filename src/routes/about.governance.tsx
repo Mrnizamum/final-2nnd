@@ -24,9 +24,9 @@ const sections = [
 function Governance() {
   return (
     <PageLayout
-      eyebrow="About Us · Governance"
+      eyebrow="ABOUT US"
       title="Governance, Ethics & Compliance"
-      subtitle="Our Code of Conduct guides every employee, subcontractor and representative of AtS."
+      subtitle=""
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about/governance" />}
     >
       <div className="grid gap-4 sm:grid-cols-2">
