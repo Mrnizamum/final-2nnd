@@ -119,10 +119,10 @@ export function SiteHeader() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  activeProps={{ className: "bg-white text-[#3A3A3A]" }}
-                  inactiveProps={{ className: "text-white hover:bg-white/10" }}
+                  activeProps={{ className: "bg-[#1e40af] text-white" }}
+                  inactiveProps={{ className: "text-[#3A3A3A] hover:bg-black/5" }}
                   activeOptions={{ exact: item.to === "/" }}
-                  className="px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
+                  className="flex h-full items-center px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
@@ -131,10 +131,17 @@ export function SiteHeader() {
           </nav>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile logo + hamburger */}
+        <Link to="/" className="flex items-center lg:hidden">
+          <img
+            src={logoAsset.url}
+            alt="AtS Construction & Engineering"
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
         <button
           onClick={() => setOpen((v) => !v)}
-          className="rounded-md border border-white/40 bg-[#3A3A3A]/70 p-2 text-white transition-colors hover:bg-white/10 lg:hidden"
+          className="rounded-md border border-black/20 bg-white p-2 text-[#3A3A3A] transition-colors hover:bg-black/5 lg:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
