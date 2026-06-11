@@ -25,7 +25,7 @@ const nav: NavItem[] = [
       { label: "Governance, Ethics & Compliance", to: "/about/governance" },
       { label: "Leadership & Management Approach", to: "/about/leadership" },
       {
-        label: "Our Assurance",
+          label: "Our Commitment",
         to: "/about/commitment",
         children: [
           { label: "HSSE Philosophy", to: "/about/hsse" },
@@ -38,7 +38,7 @@ const nav: NavItem[] = [
     ],
   },
   {
-    label: "Our Business",
+      label: "Our Services",
     to: "/business",
     children: [
       { label: "Project Works (EPC Mechanical)", to: "/business/project-works" },
@@ -74,17 +74,14 @@ export function SiteHeader() {
     : "sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-black/10";
 
   const navContainerClasses = isHome
-    ? "flex w-full items-stretch overflow-visible rounded-xl bg-black/35 backdrop-blur-md shadow-lg shadow-black/20 ring-1 ring-white/10"
-    : "flex w-full items-stretch overflow-visible rounded-xl bg-[#f5f5f5] shadow-sm";
+    ? "flex w-full items-stretch overflow-visible rounded-xl bg-white/95 backdrop-blur-md shadow-lg shadow-black/10 ring-1 ring-black/5"
+    : "flex w-full items-stretch overflow-visible rounded-xl bg-white shadow-sm ring-1 ring-black/5";
 
-  const logoClasses = isHome
-    ? "flex items-center px-4 py-2"
-    : "flex items-center px-4 py-2 bg-white border-r border-black/10 rounded-l-xl";
+  const logoClasses = "flex items-center px-4 py-2 bg-white rounded-l-xl";
 
-  const activeItem = isHome ? "bg-white/20 text-white" : "bg-[#1e40af] text-white";
-  const inactiveItem = isHome
-    ? "text-white hover:bg-white/10"
-    : "text-[#3A3A3A] hover:bg-black/5";
+  const activeItem = "bg-[#1e40af] text-white";
+  const inactiveItem =
+    "text-[#3A3A3A] hover:bg-[#dbeafe] hover:text-[#1e40af] transition-colors duration-300";
 
   const mobileBtnClasses = isHome
     ? "rounded-md border border-white/20 bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
@@ -100,7 +97,7 @@ export function SiteHeader() {
               <img
                 src={logoAsset.url}
                 alt="AtS Construction & Engineering"
-                className="h-10 w-auto object-contain md:h-12"
+                className="h-[52px] w-auto object-contain md:h-[62px]"
                 style={{ imageRendering: "auto" }}
               />
             </Link>
@@ -108,36 +105,36 @@ export function SiteHeader() {
             {nav.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
-                  <Link
+                   <Link
                     to={item.to}
                     activeProps={{ className: activeItem }}
                     inactiveProps={{ className: inactiveItem }}
-                    className="flex h-full items-center gap-1 px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
+                    className="flex h-full items-center gap-1 px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors duration-300"
                   >
                     {item.label}
                     <ChevronDown className="h-3.5 w-3.5" />
                   </Link>
                   {/* Dropdown */}
-                  <div className="invisible absolute left-0 top-full z-50 min-w-[280px] translate-y-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                    <ul className="mt-1 rounded-sm bg-[#1e40af]/95 py-2 shadow-xl shadow-black/30 backdrop-blur-md">
+                  <div className="invisible absolute left-0 top-full z-50 min-w-[220px] translate-y-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                    <ul className="mt-1 rounded-sm bg-[#1e40af]/95 py-1 shadow-xl shadow-black/30 backdrop-blur-md">
                       {item.children.map((sub) => (
                         <li key={sub.label} className="group/sub relative">
                           {sub.children ? (
                             <>
                               <Link
                                 to={sub.to}
-                                className="flex items-center justify-between gap-2 px-5 py-2.5 text-[14px] text-white transition-colors hover:bg-white/20"
+                                className="flex items-center justify-between gap-2 px-4 py-1.5 text-[12px] text-white transition-colors hover:bg-white/20"
                               >
                                 <span>{sub.label}</span>
                                 <ChevronRight className="h-3.5 w-3.5" />
                               </Link>
-                              <div className="invisible absolute left-full top-0 z-50 min-w-[240px] -translate-x-1 pl-1 opacity-0 transition-all duration-200 group-hover/sub:visible group-hover/sub:translate-x-0 group-hover/sub:opacity-100">
-                                <ul className="rounded-sm bg-[#1e40af]/95 py-2 shadow-xl shadow-black/30 backdrop-blur-md">
+                              <div className="invisible absolute left-full top-0 z-50 min-w-[200px] -translate-x-1 pl-1 opacity-0 transition-all duration-200 group-hover/sub:visible group-hover/sub:translate-x-0 group-hover/sub:opacity-100">
+                                <ul className="rounded-sm bg-[#1e40af]/95 py-1 shadow-xl shadow-black/30 backdrop-blur-md">
                                   {sub.children.map((leaf) => (
                                     <li key={leaf.label}>
                                       <Link
                                         to={leaf.to}
-                                        className="block px-5 py-2.5 text-[14px] text-white transition-colors hover:bg-white/20"
+                                        className="block px-4 py-1.5 text-[12px] text-white transition-colors hover:bg-white/20"
                                       >
                                         {leaf.label}
                                       </Link>
@@ -149,7 +146,7 @@ export function SiteHeader() {
                           ) : (
                             <Link
                               to={sub.to}
-                              className="block px-5 py-2.5 text-[14px] text-white transition-colors hover:bg-white/20"
+                              className="block px-4 py-1.5 text-[12px] text-white transition-colors hover:bg-white/20"
                             >
                               {sub.label}
                             </Link>
@@ -166,7 +163,7 @@ export function SiteHeader() {
                   activeProps={{ className: activeItem }}
                   inactiveProps={{ className: inactiveItem }}
                   activeOptions={{ exact: item.to === "/" }}
-                  className="flex h-full items-center px-5 py-3 text-[13px] font-medium tracking-wide transition-colors duration-300"
+                  className="flex h-full items-center px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors duration-300"
                 >
                   {item.label}
                 </Link>

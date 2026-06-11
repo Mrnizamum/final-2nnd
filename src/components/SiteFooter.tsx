@@ -5,11 +5,11 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#1e40af] text-white">
       <div className="container-x flex flex-col items-center justify-between gap-3 py-3 md:flex-row">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center rounded-md bg-white px-3 py-1.5 shadow-sm">
           <img
             src={logoAsset.url}
             alt="AtS Construction & Engineering"
-            className="h-10 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
         </Link>
 
@@ -34,7 +34,16 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="container-x flex flex-col items-center justify-between gap-2 py-2 text-xs text-white/60 sm:flex-row">
-          <span>© {new Date().getFullYear()} AtS Construction & Engineering Pte. Ltd. All rights reserved.</span>
+          <span className="flex items-center gap-2">
+            <Link
+              to="/admin"
+              className="font-semibold text-white/80 underline-offset-4 transition hover:text-white hover:underline"
+            >
+              Admin Panel
+            </Link>
+            <span className="inline-block h-2 w-2 rounded-full bg-yellow-400" aria-hidden />
+            <span>© {new Date().getFullYear()} AtS Construction & Engineering Pte. Ltd. All rights reserved.</span>
+          </span>
           <span>Engineering Excellence for Industrial Performance</span>
         </div>
       </div>

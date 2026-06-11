@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain, ShieldCheck, Sparkles, Handshake, Wrench } from "lucide-react";
+import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain } from "lucide-react";
 import slide1 from "@/assets/hd-slide-1.png.asset.json";
 import slide2 from "@/assets/hd-slide-2.png.asset.json";
 import slide3 from "@/assets/hd-slide-3.png.asset.json";
@@ -126,16 +126,12 @@ function Home() {
 
       <div className="marquee-mask mt-6 overflow-hidden">
         <div className="marquee-track flex w-max gap-4 md:gap-6">
-          {[...Array(2)].flatMap((_, dup) =>
+          {[...Array(4)].flatMap((_, dup) =>
             [
               { icon: HardHat, label: "Passion" },
               { icon: Users, label: "Teamwork" },
-              { icon: Award, label: "Excellence" },
               { icon: Mountain, label: "Leadership" },
-              { icon: ShieldCheck, label: "Safety" },
-              { icon: Sparkles, label: "Integrity" },
-              { icon: Handshake, label: "Partnership" },
-              { icon: Wrench, label: "Craftsmanship" },
+              { icon: Award, label: "Excellence" },
             ].map((v) => (
               <div
                 key={`${dup}-${v.label}`}
@@ -193,12 +189,12 @@ function Home() {
               { img: bizScaffold, title: "Other Operations", to: "/business/partnership" },
             ].map((s) => (
               <Link key={s.title} to={s.to} className="group block">
-                <div className="aspect-[4/3] overflow-hidden border border-border">
+                <div className="aspect-[4/5] overflow-hidden rounded-md border border-border bg-white">
                   <img
                     src={s.img}
                     alt={s.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
                 <h3 className="mt-2 text-sm font-semibold text-foreground group-hover:text-[#1e40af]">
