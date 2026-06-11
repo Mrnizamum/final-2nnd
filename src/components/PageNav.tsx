@@ -53,12 +53,12 @@ export const aboutLinks: readonly SidebarLink[] = [
   { to: "/about", label: "Corporate Profile" },
   { to: "/about/governance", label: "Governance, Ethics & Compliance" },
   { to: "/about/leadership", label: "Leadership & Management Approach" },
-  { to: "/about/commitment", label: "Our Assurance" },
+  { to: "/about/commitment", label: "Our Commitment" },
   { to: "/about/strengths", label: "Operational Strengths" },
 ];
 
 export const assuranceLinks: readonly SidebarLink[] = [
-  { to: "/about/commitment", label: "Our Assurance — Overview" },
+  { to: "/about/commitment", label: "Our Commitment — Overview" },
   { to: "/about/hsse", label: "HSSE Philosophy" },
   { to: "/about/quality", label: "Quality Assurance" },
   { to: "/about/delivery", label: "Timely Delivery Assurance" },
@@ -86,7 +86,7 @@ export const networkLinks: readonly SidebarLink[] = [
 export const siteLinks: readonly SidebarLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/business", label: "Our Business" },
+  { to: "/business", label: "Our Services" },
   { to: "/network", label: "Field of Business" },
   { to: "/contact", label: "Contact Us" },
 ];

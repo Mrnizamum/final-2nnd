@@ -3,6 +3,7 @@ import { Send } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, siteLinks } from "@/components/PageNav";
+import whatsappHelmet from "@/assets/whatsapp-helmet.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -54,6 +55,25 @@ function Contact() {
       subtitle="Tell us about your project and our team will be in touch shortly."
       nav={<PageNav title="Navigate" links={siteLinks} currentPath="/contact" />}
     >
+      <a
+        href="https://wa.me/6581246664"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="group fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#ef6c1a] p-2 pr-4 shadow-xl shadow-black/25 ring-2 ring-white transition hover:-translate-y-0.5 hover:bg-[#d65a10]"
+      >
+        <img
+          src={whatsappHelmet}
+          alt=""
+          width={64}
+          height={64}
+          className="h-14 w-14 object-contain drop-shadow-md transition group-hover:rotate-[-6deg]"
+        />
+        <span className="hidden text-sm font-semibold text-white sm:inline">
+          WhatsApp us
+        </span>
+      </a>
+
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="lp-card">
           <div className="lp-kicker">HQ Address</div>
