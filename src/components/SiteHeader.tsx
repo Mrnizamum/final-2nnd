@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
-import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
-
+const logo = "/imgs/ats-logo-transparent.png";
 type SubItem = {
   label: string;
   to: string;
@@ -89,7 +88,7 @@ export function SiteHeader() {
           <nav className={navContainerClasses}>
             <Link to="/" className={logoClasses}>
               <img
-                src={logoAsset.url}
+                src={logo}
                 alt="AtripleS Construction & Engineering"
                 className="h-[72px] w-auto object-contain md:h-[88px]"
                 style={{ imageRendering: "auto" }}
@@ -167,8 +166,8 @@ export function SiteHeader() {
 
         {/* Mobile logo + hamburger */}
         <Link to="/" className="flex items-center lg:hidden">
-          <img
-            src={logoAsset.url}
+         <img
+            src={logo}
             alt="AtripleS Construction & Engineering"
             className="h-10 w-auto object-contain"
           />
