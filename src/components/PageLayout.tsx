@@ -41,13 +41,13 @@ export function PageLayout({
                 />
               </div>
               <div className="leading-tight">
-                <div className="lp-brand">AtripleS Construction &amp; Engineering Pte. Ltd.</div>
-                <div className="lp-brand-sub">Engineering Excellence for Industrial Performance</div>
+                <div className="lp-brand">{"\n"}</div>
+                <div className="lp-brand-sub">{"\n"}</div>
               </div>
             </div>
             <div className="hidden text-right leading-relaxed sm:block">
-              <div className="lp-meta">Singapore</div>
-              <div className="lp-meta">Est. 2025</div>
+              <div className="lp-meta">{"\n"}</div>
+              <div className="lp-meta">{"\n"}</div>
             </div>
           </header>
 

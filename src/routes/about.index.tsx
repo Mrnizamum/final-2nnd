@@ -22,7 +22,7 @@ function About() {
     >
       <div className="lp-prose max-w-none">
         <p>
-          Established in 2025, AtripleS Construction &amp; Engineering Pte. Ltd. is a Singapore-based
+          Established in 2025, {"\n"} is a {"\n"} based
           engineering and construction company serving the oil &amp; gas, petrochemical, refinery,
           energy, and industrial sectors. Although newly founded, our company is built upon decades
           of combined industry experience, technical expertise, and leadership gained through
@@ -48,8 +48,7 @@ function About() {
           region.
         </p>
         <p>
-          Driven by experience, guided by safety, and committed to excellence, AtripleS Construction
-          &amp; Engineering Pte. Ltd. is ready to support the evolving needs of today&apos;s
+          Driven by experience, guided by safety, and committed to excellence, {"\n"} is ready to support the evolving needs of today&apos;s
           industrial landscape.
         </p>
       </div>

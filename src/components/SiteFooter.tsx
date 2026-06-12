@@ -41,9 +41,9 @@ export function SiteFooter() {
               title="Admin"
               className="inline-block h-2 w-2 rounded-full bg-yellow-400 transition hover:scale-125"
             />
-            <span>© {new Date().getFullYear()} AtripleS Construction & Engineering Pte. Ltd. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} {"\n"} All rights reserved.</span>
           </span>
-          <span>Engineering Excellence for Industrial Performance</span>
+          <span>{"\n"}</span>
         </div>
       </div>
     </footer>
