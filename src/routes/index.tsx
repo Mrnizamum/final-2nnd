@@ -13,7 +13,7 @@ import bizScaffold from "@/assets/biz-scaffold.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AtS Construction & Engineering Pte. Ltd." },
+      { title: "AtripleS Construction & Engineering Pte. Ltd." },
       {
         name: "description",
         content:
@@ -120,7 +120,7 @@ function Home() {
         </h2>
         <div className="mx-auto mt-3 h-[3px] w-16 bg-[#ef6c1a]" />
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-black/70">
-          Delivering every project on schedule — without ever compromising on the safety of our people, partners and communities.
+          Delivering every project on schedule without ever compromising on the safety of our people, partners and communities.
         </p>
       </div>
 
@@ -158,8 +158,8 @@ function Home() {
             <h2 className="font-display text-xl font-semibold md:text-2xl">About Us</h2>
             <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-white/90">
               <p>
-                Established in 2025, AtS Construction & Engineering Pte. Ltd. is a
-                Singapore-based engineering and construction company serving the oil & gas,
+                Established in 2025, AtripleS Construction & Engineering Pte. Ltd. is a
+                Singapore based engineering and construction company serving the oil & gas,
                 petrochemical, refinery, energy, and industrial sectors. Although newly
                 founded, our company is built upon decades of combined industry experience,
                 technical expertise, and leadership gained through delivering complex
