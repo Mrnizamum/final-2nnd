@@ -6,7 +6,7 @@ import hero from "@/assets/ind-construction.jpg";
 export const Route = createFileRoute("/network/infrastructure")({
   head: () => ({
     meta: [
-      { title: "Infrastructure — Industries We Serve | AtripleS" },
+      { title: "Infrastructure — Industries We Serve | \n" },
       { name: "description", content: "Road works, civil construction, repair, maintenance and public facility upgrading projects across Singapore." },
     ],
   }),

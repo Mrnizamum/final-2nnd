@@ -5,7 +5,7 @@ import { PageNav, aboutLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/about/strengths")({
   head: () => ({
     meta: [
-      { title: "Operational Strengths — AtripleS Construction & Engineering" },
+      { title: "Operational Strengths — \n" },
       { name: "description", content: "Our capabilities, people, resources and technology — the foundations of reliable project delivery." },
     ],
   }),

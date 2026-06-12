@@ -5,7 +5,7 @@ import { PageNav, commitmentLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/about/hsse")({
   head: () => ({
     meta: [
-      { title: "HSSE Philosophy — AtripleS Construction & Engineering" },
+      { title: "HSSE Philosophy — \n" },
       { name: "description", content: "Health, Safety, Security & Environment management system, ISO alignment and BizSAFE Star ambition at AtripleS." },
     ],
   }),

@@ -13,7 +13,7 @@ import bizScaffold from "@/assets/biz-scaffold.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AtripleS Construction & Engineering Pte. Ltd." },
+      { title: "\n" },
       {
         name: "description",
         content:

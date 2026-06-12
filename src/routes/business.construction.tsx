@@ -5,7 +5,7 @@ import { PageNav, businessLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/business/construction")({
   head: () => ({
     meta: [
-      { title: "General Construction Works — AtripleS Construction & Engineering" },
+      { title: "General Construction Works — \n" },
       { name: "description", content: "Civil works, structural steel, concrete, foundations and supporting infrastructure for industrial facilities." },
     ],
   }),
