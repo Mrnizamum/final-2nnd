@@ -24,7 +24,7 @@ function Page() {
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/construction" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
-        <img src={hero} alt="Construction site" className="h-64 w-full object-cover grayscale" />
+        <img src={hero} alt="Construction site" className="h-64 w-full object-cover " />
       </div>
       <div className="lp-prose mt-6">
         <p>
