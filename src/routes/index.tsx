@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain } from "lucide-react";
 const slides = [
-  "/imgs/hd-slide-1.png",
-  "/imgs/hd-slide-2.png",
-  "/imgs/hd-slide-3.png",
-  "/imgs/hd-slide-4.png",
-  "/imgs/hd-slide-5.png",
+  "public/imgs/hd-slide-1.png",
+  "public/imgs/hd-slide-2.png",
+  "public/imgs/hd-slide-3.png",
+  "public/imgs/hd-slide-4.png",
+  "public/imgs/hd-slide-5.png",
 ];
 import bizProject from "@/assets/biz-project.jpg";
 import bizMaintenance from "@/assets/biz-maintenance.jpg";
