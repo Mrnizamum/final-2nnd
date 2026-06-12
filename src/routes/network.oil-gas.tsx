@@ -29,7 +29,7 @@ function Page() {
       <div className="lp-prose mt-6">
         <p>
           AtripleS supports hydrocarbon and petrochemical operators with disciplined project delivery
-          and safe maintenance execution — from process piping to full turnaround programmes.
+          and safe maintenance execution from process piping to full turnaround programmes.
         </p>
       </div>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
