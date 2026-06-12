@@ -16,7 +16,7 @@ const sections = [
   {
     icon: "🔧",
     title: "Our Capabilities",
-    body: "At AtripleS Construction & Engineering Pte. Ltd., we specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery, and industrial sectors. This integrated approach allows us to support clients with efficient, reliable, and coordinated execution from planning to completion.",
+    body: "At {"\n"}, we specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery, and industrial sectors. This integrated approach allows us to support clients with efficient, reliable, and coordinated execution from planning to completion.",
   },
   {
     icon: "👷",
