@@ -6,7 +6,7 @@ import hero from "@/assets/hero-tanks.jpg";
 export const Route = createFileRoute("/network/oil-gas")({
   head: () => ({
     meta: [
-      { title: "Oil & Gas — Industries We Serve | AtS" },
+      { title: "Oil & Gas — Industries We Serve | AtripleS" },
       { name: "description", content: "EPC, construction, piping, mechanical and maintenance services for oil & gas facilities, refineries, terminals and process plants." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          AtS supports hydrocarbon and petrochemical operators with disciplined project delivery
+          AtripleS supports hydrocarbon and petrochemical operators with disciplined project delivery
           and safe maintenance execution — from process piping to full turnaround programmes.
         </p>
       </div>

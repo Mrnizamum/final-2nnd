@@ -6,7 +6,7 @@ import hero from "@/assets/ind-construction.jpg";
 export const Route = createFileRoute("/network/infrastructure")({
   head: () => ({
     meta: [
-      { title: "Infrastructure — Industries We Serve | AtS" },
+      { title: "Infrastructure — Industries We Serve | AtripleS" },
       { name: "description", content: "Road works, civil construction, repair, maintenance and public facility upgrading projects across Singapore." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          AtS delivers infrastructure projects that support communities, mobility and public
+          AtripleS delivers infrastructure projects that support communities, mobility and public
           services. Our teams combine disciplined planning with safe site execution to keep
           critical works on schedule.
         </p>

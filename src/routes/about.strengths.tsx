@@ -21,17 +21,17 @@ const sections = [
   {
     icon: "👷",
     title: "Our People",
-    body: "Our strength lies in our people. AtS is led by Executive Directors and senior management professionals with more than 20 years of experience in the oil & gas and chemical terminal industries. Our team includes experienced project managers, engineers, and technical specialists, many of whom bring over 15 years of industry expertise. We are committed to continuous training and development to ensure our workforce remains skilled, competent, and capable of delivering high quality work in demanding industrial environments. Our people are our key asset, driving performance, safety, and excellence in every project.",
+    body: "Our strength lies in our people. AtripleS is led by Executive Directors and senior management professionals with more than 20 years of experience in the oil & gas and chemical terminal industries. Our team includes experienced project managers, engineers, and technical specialists, many of whom bring over 15 years of industry expertise. We are committed to continuous training and development to ensure our workforce remains skilled, competent, and capable of delivering high quality work in demanding industrial environments. Our people are our key asset, driving performance, safety, and excellence in every project.",
   },
   {
     icon: "🏗️",
     title: "Our Resources",
-    body: "AtS is supported by strong operational resources, including a well maintained and growing fleet of construction equipment. These resources enable us to execute projects efficiently, handle large scale requirements, and respond quickly to emergency shutdowns and maintenance needs. Our ability to mobilize equipment and manpower effectively provides a strong advantage in delivering projects on time while maintaining cost efficiency and operational reliability.",
+    body: "AtripleS is supported by strong operational resources, including a well maintained and growing fleet of construction equipment. These resources enable us to execute projects efficiently, handle large scale requirements, and respond quickly to emergency shutdowns and maintenance needs. Our ability to mobilize equipment and manpower effectively provides a strong advantage in delivering projects on time while maintaining cost efficiency and operational reliability.",
   },
   {
     icon: "💻",
     title: "Our Technology",
-    body: "We adopt modern project management practices supported by advanced digital tools and systems to enhance productivity, coordination, and execution efficiency. The use of structured planning platforms and project control systems enables us to improve communication, monitor progress effectively, and ensure accurate resource allocation across all sites. By integrating technology into our operations, AtS strengthens its capability to deliver projects with greater precision, efficiency, and control.",
+    body: "We adopt modern project management practices supported by advanced digital tools and systems to enhance productivity, coordination, and execution efficiency. The use of structured planning platforms and project control systems enables us to improve communication, monitor progress effectively, and ensure accurate resource allocation across all sites. By integrating technology into our operations, AtripleS strengthens its capability to deliver projects with greater precision, efficiency, and control.",
   },
 ];
 

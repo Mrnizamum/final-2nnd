@@ -6,7 +6,7 @@ import hero from "@/assets/ind-green.jpg";
 export const Route = createFileRoute("/network/green-energy")({
   head: () => ({
     meta: [
-      { title: "Green Energy — Industries We Serve | AtS" },
+      { title: "Green Energy — Industries We Serve | AtripleS" },
       { name: "description", content: "Engineering, construction, maintenance and infrastructure support for renewable and sustainable energy projects." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          AtS contributes to the energy transition by delivering the civil, mechanical and
+          AtripleS contributes to the energy transition by delivering the civil, mechanical and
           maintenance backbone that renewable and sustainable energy projects rely on.
         </p>
       </div>

@@ -6,7 +6,7 @@ import hero from "@/assets/ind-lta.jpg";
 export const Route = createFileRoute("/network/land-transport")({
   head: () => ({
     meta: [
-      { title: "Land Transport Authority — Industries We Serve | AtS" },
+      { title: "Land Transport Authority — Industries We Serve | AtripleS" },
       { name: "description", content: "Civil works, road maintenance and repair services supporting transport infrastructure development." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          AtS supports transport authorities and contractors with civil, maintenance and repair
+          AtripleS supports transport authorities and contractors with civil, maintenance and repair
           services delivered to Singapore&apos;s public works standards.
         </p>
       </div>
