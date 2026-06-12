@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, networkLinks } from "@/components/PageNav";
-import hero from "@/assets/ind-construction.jpg";
+import hero from "/assets/ind-construction.jpg";
 
 export const Route = createFileRoute("/network/infrastructure")({
   head: () => ({
