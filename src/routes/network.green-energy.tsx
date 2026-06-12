@@ -13,12 +13,7 @@ export const Route = createFileRoute("/network/green-energy")({
   component: Page,
 });
 
-const capabilities = [
-  ["Renewable Infrastructure", "Civil and mechanical works supporting solar, wind and clean energy facilities."],
-  ["Sustainable Construction", "Construction practices that reduce environmental impact across the project lifecycle."],
-  ["Plant Maintenance", "Maintenance services that keep renewable assets producing reliably."],
-  ["Engineering Support", "Engineering and integration support for sustainable energy programmes."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
