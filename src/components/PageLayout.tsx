@@ -36,12 +36,12 @@ export function PageLayout({
               <div className="lp-logo-badge">
                 <img
                   src={logoAsset.url}
-                  alt="AtS Construction & Engineering"
+                  alt="AtripleS Construction & Engineering"
                   className="h-8 w-auto object-contain"
                 />
               </div>
               <div className="leading-tight">
-                <div className="lp-brand">AtS Construction &amp; Engineering Pte. Ltd.</div>
+                <div className="lp-brand">AtripleS Construction &amp; Engineering Pte. Ltd.</div>
                 <div className="lp-brand-sub">Engineering Excellence for Industrial Performance</div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export function PageLayout({
           </div>
 
           <footer className="letterpad-foot">
-            <span>AtS Construction &amp; Engineering Pte. Ltd.</span>
+            <span>AtripleS Construction &amp; Engineering Pte. Ltd.</span>
             <span>admin@atsce.com.sg · +65 8124 6664</span>
           </footer>
         </article>

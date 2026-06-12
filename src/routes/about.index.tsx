@@ -5,7 +5,7 @@ import { PageNav, aboutLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/about/")({
   head: () => ({
     meta: [
-      { title: "About AtS Construction & Engineering — Corporate Profile" },
+      { title: "About AtripleS Construction & Engineering — Corporate Profile" },
       { name: "description", content: "Singapore-based engineering and construction company serving oil & gas, petrochemical, refinery, energy and industrial sectors." },
     ],
   }),
@@ -22,14 +22,14 @@ function About() {
     >
       <div className="lp-prose max-w-none">
         <p>
-          Established in 2025, AtS Construction &amp; Engineering Pte. Ltd. is a Singapore-based
+          Established in 2025, AtripleS Construction &amp; Engineering Pte. Ltd. is a Singapore-based
           engineering and construction company serving the oil &amp; gas, petrochemical, refinery,
           energy, and industrial sectors. Although newly founded, our company is built upon decades
           of combined industry experience, technical expertise, and leadership gained through
           delivering complex projects across various industrial environments.
         </p>
         <p>
-          AtS specializes in Engineering, Procurement and Construction (EPC), piping and mechanical
+          AtripleS specializes in Engineering, Procurement and Construction (EPC), piping and mechanical
           works, scaffolding services, industrial construction, maintenance support and skilled
           manpower solutions. Our experienced team is committed to providing safe, reliable and
           cost-effective services tailored to meet the unique requirements of each client.
@@ -41,14 +41,14 @@ function About() {
           highest industry standards.
         </p>
         <p>
-          At AtS, we believe that long term success is built on trust, integrity and performance. We
+          At AtripleS, we believe that long term success is built on trust, integrity and performance. We
           work closely with our clients to understand their goals and deliver solutions that create
           lasting value. As we continue to grow, our vision is to become a trusted engineering
           partner and preferred service provider for industrial projects across Singapore and the
           region.
         </p>
         <p>
-          Driven by experience, guided by safety, and committed to excellence, AtS Construction
+          Driven by experience, guided by safety, and committed to excellence, AtripleS Construction
           &amp; Engineering Pte. Ltd. is ready to support the evolving needs of today&apos;s
           industrial landscape.
         </p>

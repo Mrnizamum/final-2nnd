@@ -8,7 +8,7 @@ export function SiteFooter() {
         <Link to="/" className="flex items-center rounded-md bg-white px-3 py-1.5 shadow-sm">
           <img
             src={logoAsset.url}
-            alt="AtS Construction & Engineering"
+            alt="AtripleS Construction & Engineering"
             className="h-12 w-auto object-contain"
           />
         </Link>
