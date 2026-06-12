@@ -3,8 +3,8 @@ import { useState } from "react";
 import { X, Award } from "lucide-react";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, aboutLinks } from "@/components/PageNav";
-import certIso9001 from "@/assets/cert-iso9001.jpg.asset.json";
-import certIso45001 from "@/assets/cert-iso45001.jpg.asset.json";
+const certIso9001 = "/imgs/cert-iso9001.jpg";
+const certIso45001 = "/imgs/cert-iso45001.jpg";
 
 export const Route = createFileRoute("/about/")({
   head: () => ({
@@ -18,8 +18,8 @@ export const Route = createFileRoute("/about/")({
 
 function About() {
   const certificates = [
-    { title: "ISO 9001:2015", subtitle: "Quality Management System", img: certIso9001.url, available: true },
-    { title: "ISO 45001:2018", subtitle: "Occupational Health & Safety", img: certIso45001.url, available: true },
+    { title: "ISO 9001:2015", subtitle: "Quality Management System", img: certIso9001, available: true },
+    { title: "ISO 45001:2018", subtitle: "Occupational Health & Safety", img: certIso45001, available: true },
     { title: "ISO 14001:2015", subtitle: "Environmental Management", img: null, available: false },
   ];
   const [active, setActive] = useState<number | null>(null);
