@@ -13,8 +13,8 @@ import landTransport from "@/assets/land_transport_authority.jpg.asset.json";
 export const Route = createFileRoute("/network/")({
   head: () => ({
     meta: [
-      { title: "Field of Business — Industries We Serve | AtS" },
-      { name: "description", content: "Industries served by AtS: infrastructure, oil & gas, green energy, power generation, construction and Land Transport Authority works." },
+      { title: "Field of Business — Industries We Serve | AtripleS" },
+      { name: "description", content: "Industries served by AtripleS: infrastructure, oil & gas, green energy, power generation, construction and Land Transport Authority works." },
     ],
   }),
   component: Network,

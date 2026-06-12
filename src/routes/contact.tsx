@@ -7,8 +7,8 @@ import { PageNav, siteLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact AtS Construction & Engineering Pte. Ltd." },
-      { name: "description", content: "Get in touch with AtS Construction & Engineering — Singapore-based industrial engineering and construction specialist." },
+      { title: "Contact AtripleS Construction & Engineering Pte. Ltd." },
+      { name: "description", content: "Get in touch with AtripleS Construction & Engineering — Singapore-based industrial engineering and construction specialist." },
     ],
   }),
   component: Contact,

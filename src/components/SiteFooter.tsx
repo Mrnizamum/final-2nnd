@@ -8,7 +8,7 @@ export function SiteFooter() {
         <Link to="/" className="flex items-center rounded-md bg-white px-3 py-1.5 shadow-sm">
           <img
             src={logoAsset.url}
-            alt="AtS Construction & Engineering"
+            alt="AtripleS Construction & Engineering"
             className="h-12 w-auto object-contain"
           />
         </Link>
@@ -41,7 +41,7 @@ export function SiteFooter() {
               title="Admin"
               className="inline-block h-2 w-2 rounded-full bg-yellow-400 transition hover:scale-125"
             />
-            <span>© {new Date().getFullYear()} AtS Construction & Engineering Pte. Ltd. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} AtripleS Construction & Engineering Pte. Ltd. All rights reserved.</span>
           </span>
           <span>Engineering Excellence for Industrial Performance</span>
         </div>

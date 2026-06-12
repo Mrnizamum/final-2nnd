@@ -5,8 +5,8 @@ import { PageNav, aboutLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/about/leadership")({
   head: () => ({
     meta: [
-      { title: "Leadership & Management Approach — AtS Construction & Engineering" },
-      { name: "description", content: "Disciplined execution, strong leadership and full accountability across AtS operations." },
+      { title: "Leadership & Management Approach — AtripleS Construction & Engineering" },
+      { name: "description", content: "Disciplined execution, strong leadership and full accountability across AtripleS operations." },
     ],
   }),
   component: Leadership,
@@ -31,7 +31,7 @@ function Leadership() {
       nav={<PageNav title="About Us" links={aboutLinks} currentPath="/about/leadership" />}
     >
       <div className="lp-prose space-y-5">
-        <p>At AtS Construction &amp; Engineering Pte. Ltd., our leadership and Management approach is built on disciplined execution, strong leadership, and full accountability. We are committed to delivering safe, efficient, and high quality engineering solutions that consistently meet client expectations.</p>
+        <p>At AtripleS Construction &amp; Engineering Pte. Ltd., our leadership and Management approach is built on disciplined execution, strong leadership, and full accountability. We are committed to delivering safe, efficient, and high quality engineering solutions that consistently meet client expectations.</p>
 
         <h2 className="lp-h text-lg">Core Principles</h2>
         <p>Our operations are guided by the following principles:</p>
@@ -44,7 +44,7 @@ function Leadership() {
         ))}
 
         <p className="font-bold text-[#1a1a1a]">Our Commitment</p>
-        <p>AtS is committed to maintaining a strong safety driven management approach, ensuring operational excellence, risk control, and long-term trust with our clients and partners in every project we undertake.</p>
+        <p>AtripleS is committed to maintaining a strong safety driven management approach, ensuring operational excellence, risk control, and long-term trust with our clients and partners in every project we undertake.</p>
       </div>
     </PageLayout>
   );

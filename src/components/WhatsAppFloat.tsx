@@ -15,7 +15,7 @@ export function WhatsAppFloat() {
         className="h-10 w-10 object-contain"
       />
       <span className="pointer-events-none absolute inset-x-0 bottom-1 text-center font-display text-[9px] font-extrabold leading-none tracking-tight text-[#1e40af]">
-        AtS
+        AtripleS
       </span>
     </a>
   );

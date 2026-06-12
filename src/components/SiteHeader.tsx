@@ -90,7 +90,7 @@ export function SiteHeader() {
             <Link to="/" className={logoClasses}>
               <img
                 src={logoAsset.url}
-                alt="AtS Construction & Engineering"
+                alt="AtripleS Construction & Engineering"
                 className="h-[52px] w-auto object-contain md:h-[62px]"
                 style={{ imageRendering: "auto" }}
               />
@@ -171,7 +171,7 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center lg:hidden">
           <img
             src={logoAsset.url}
-            alt="AtS Construction & Engineering"
+            alt="AtripleS Construction & Engineering"
             className="h-10 w-auto object-contain"
           />
         </Link>

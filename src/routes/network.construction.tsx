@@ -6,7 +6,7 @@ import hero from "@/assets/biz-maintenance.jpg";
 export const Route = createFileRoute("/network/construction")({
   head: () => ({
     meta: [
-      { title: "Construction — Industries We Serve | AtS" },
+      { title: "Construction — Industries We Serve | AtripleS" },
       { name: "description", content: "Reliable, efficient construction services supporting sustainable development across Singapore and the region." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          From enabling works to project handover, AtS delivers construction with a focus on
+          From enabling works to project handover, AtripleS delivers construction with a focus on
           safety, quality and on-time completion.
         </p>
       </div>

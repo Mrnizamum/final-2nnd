@@ -6,7 +6,7 @@ import hero from "@/assets/ind-power.jpg";
 export const Route = createFileRoute("/network/power-generation")({
   head: () => ({
     meta: [
-      { title: "Power Generation — Industries We Serve | AtS" },
+      { title: "Power Generation — Industries We Serve | AtripleS" },
       { name: "description", content: "Plant maintenance, turnaround and mechanical services supporting uninterrupted power production." },
     ],
   }),
@@ -33,7 +33,7 @@ function Page() {
       </div>
       <div className="lp-prose mt-6">
         <p>
-          AtS partners with power producers and operators to keep generating assets available,
+          AtripleS partners with power producers and operators to keep generating assets available,
           safe and reliable through disciplined maintenance and turnaround execution.
         </p>
       </div>
