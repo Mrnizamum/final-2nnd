@@ -15,7 +15,8 @@ const bizScaffold = "/imgs/biz-scaffold.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Engineering Excellence for Industrial Performance" },
+      { title: "AtripleS Construction & Engineering Pte. Ltd." },
+      { title: "\n" },
       {
         name: "description",
         content:
@@ -58,9 +59,10 @@ function Home() {
       {/* Hero copy */}
       <div className="relative z-10 flex h-full items-center">
         <div className="container-x">
-          <div className="max-w-3xl text-white">
+       <div className="max-w-3xl text-white">
             <h1 className="font-display text-4xl font-bold leading-[1.1] drop-shadow-md md:text-6xl" style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.9), 0px 0px 2px rgba(0,0,0,1), 0px 1px 3px rgba(0,0,0,0.8)' }}>
-              {"Engineering Excellence for Industrial Performance"}
+              Engineering Excellence for Industrial Performance
+              {"\n"}
             </h1>
             <p className="mt-6 text-base font-medium text-white/90 md:text-lg" style={{ textShadow: '0px 0px 3px rgba(0,0,0,0.9), 0px 0px 1px rgba(0,0,0,1), 0px 1px 2px rgba(0,0,0,0.8)' }}>
               EPC <span className="mx-2 text-[#ef6c1a]">|</span> General Construction
