@@ -3,12 +3,12 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, networkLinks } from "@/components/PageNav";
-import infrastructure from "@/assets/infrastructure.jpg.asset.json";
-import oilGas from "@/assets/oil_and_gas.jpg.asset.json";
-import greenEnergy from "@/assets/green_energy.jpg.asset.json";
-import powerGen from "@/assets/power_generation.jpg.asset.json";
-import construction from "@/assets/construction.jpg.asset.json";
-import landTransport from "@/assets/land_transport_authority.jpg.asset.json";
+import infrastructure from "/imgs/infrastructure.jpg";
+import oilGas from "/imgs/oil_and_gas.jpg";
+import greenEnergy from "@/imgs/green_energy.jpg";
+import powerGen from "/imgs/power_generation.jpg";
+import construction from "/imgs/construction.jpg";
+import landTransport from "/imgs/land_transport_authority.jpg";
 
 export const Route = createFileRoute("/network/")({
   head: () => ({
@@ -21,12 +21,12 @@ export const Route = createFileRoute("/network/")({
 });
 
 const slides = [
-  { img: infrastructure.url, title: "INFRASTRUCTURE", body: "Providing comprehensive infrastructure solutions, including road works, civil construction, repair, maintenance, and public facility upgrading projects." },
-  { img: oilGas.url, title: "Oil and Gas", body: "Providing integrated EPC, construction, piping, mechanical, and maintenance services for oil & gas facilities, refineries, terminals, and process plants." },
-  { img: greenEnergy.url, title: "GREEN ENERGY", body: "Supporting renewable and sustainable energy projects through reliable engineering, construction, maintenance, and infrastructure solutions." },
-  { img: powerGen.url, title: "POWER GENERATION", body: "Supporting uninterrupted power production through dependable plant maintenance and turnaround services." },
-  { img: construction.url, title: "CONSTRUCTION", body: "Supporting sustainable development through reliable and efficient construction services." },
-  { img: landTransport.url, title: "Land Transport Authority", body: "Supporting transport infrastructure development through civil works, road maintenance, and repair services." },
+  { img: infrastructure, title: "INFRASTRUCTURE", body: "Providing comprehensive infrastructure solutions, including road works, civil construction, repair, maintenance, and public facility upgrading projects." },
+  { img: oilGas, title: "Oil and Gas", body: "Providing integrated EPC, construction, piping, mechanical, and maintenance services for oil & gas facilities, refineries, terminals, and process plants." },
+  { img: greenEnergy, title: "GREEN ENERGY", body: "Supporting renewable and sustainable energy projects through reliable engineering, construction, maintenance, and infrastructure solutions." },
+  { img: powerGen, title: "POWER GENERATION", body: "Supporting uninterrupted power production through dependable plant maintenance and turnaround services." },
+  { img: construction, title: "CONSTRUCTION", body: "Supporting sustainable development through reliable and efficient construction services." },
+  { img: landTransport, title: "Land Transport Authority", body: "Supporting transport infrastructure development through civil works, road maintenance, and repair services." },
 ];
 
 function Network() {
