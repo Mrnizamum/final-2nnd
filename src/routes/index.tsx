@@ -15,7 +15,7 @@ const bizScaffold = "/imgs/biz-scaffold.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "\n" },
+      { title: "Engineering Excellence for Industrial Performance" },
       {
         name: "description",
         content:
