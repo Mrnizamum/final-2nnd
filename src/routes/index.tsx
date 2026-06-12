@@ -62,7 +62,7 @@ function Home() {
                 className="font-display text-4xl font-extrabold leading-[1.1] text-white md:text-6xl lg:text 7xl"
                 style={{
                   textShadow:
-                    "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0px 0px 12px rgba(0,0,0,0.8)",
+                    "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0px 0px 3px rgba(0,0,0,0.8)",
                 }}
               >
                 Engineering Excellence for
