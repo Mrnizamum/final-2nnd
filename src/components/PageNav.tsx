@@ -58,7 +58,7 @@ export const aboutLinks: readonly SidebarLink[] = [
 ];
 
 export const commitmentLinks: readonly SidebarLink[] = [
-  { to: "/about/commitment", label: "Our Commitment — Overview" },
+  { to: "/about/commitment", label: "Our Commitment Overview" },
   { to: "/about/hsse", label: "HSSE Philosophy" },
   { to: "/about/quality", label: "Quality Assurance" },
   { to: "/about/delivery", label: "Timely Delivery Assurance" },
