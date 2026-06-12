@@ -13,12 +13,7 @@ export const Route = createFileRoute("/network/land-transport")({
   component: Page,
 });
 
-const capabilities = [
-  ["Civil Works", "Civil construction for transport infrastructure and associated facilities."],
-  ["Road Maintenance", "Scheduled maintenance programmes that keep roads safe and serviceable."],
-  ["Repair Services", "Reactive repair works for road surfaces, drainage and roadside assets."],
-  ["Traffic Management", "Safe traffic management arrangements for live carriageway works."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
