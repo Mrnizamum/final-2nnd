@@ -13,19 +13,14 @@ export const Route = createFileRoute("/network/infrastructure")({
   component: Page,
 });
 
-const capabilities = [
-  ["Civil & Road Works", "Road construction, resurfacing, drainage and ancillary civil works."],
-  ["Public Facility Upgrading", "Renovation and upgrading of public facilities, amenities and shared infrastructure."],
-  ["Repair & Maintenance", "Scheduled and reactive repair programmes that extend asset life."],
-  ["Site Preparation", "Earthworks, grading and enabling works for downstream construction."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
     <PageLayout
       eyebrow="Field of Business · Sector"
       title="Infrastructure"
-      subtitle="Comprehensive infrastructure solutions — road works, civil construction, repair, maintenance and public facility upgrading projects."
+      subtitle="Comprehensive infrastructure solutions road works, civil construction, repair, maintenance and public facility upgrading projects."
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/infrastructure" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
