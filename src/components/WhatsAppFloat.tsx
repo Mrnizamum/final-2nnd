@@ -1,5 +1,4 @@
-import whatsappHelmet from "@/assets/whatsapp-helmet.png";
-
+const whatsappHelmet = "/imgs/whatsapp-helmet.png";
 export function WhatsAppFloat() {
   return (
     <a
