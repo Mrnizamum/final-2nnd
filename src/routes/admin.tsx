@@ -5,8 +5,8 @@ import { PageNav, siteLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Admin Panel — AtS Construction & Engineering" },
-      { name: "description", content: "Internal admin panel for AtS Construction & Engineering Pte. Ltd." },
+      { title: "Admin Panel — AtripleS Construction & Engineering" },
+      { name: "description", content: "Internal admin panel for AtripleS Construction & Engineering Pte. Ltd." },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -23,7 +23,7 @@ function Admin() {
     >
       <div className="lp-card">
         <p className="text-sm text-black/70">
-          The admin panel is reserved for authorized AtS personnel. Please contact the
+          The admin panel is reserved for authorized AtripleS personnel. Please contact the
           site administrator for access.
         </p>
         <div className="mt-4">
