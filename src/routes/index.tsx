@@ -61,7 +61,7 @@ function Home() {
               <h1
                 className="font-display text-4xl font-extrabold leading-[1.1] text-white md:text-6xl lg:text-7xl"
                 style={{
-                  textShadow: "0 2px 4px rgba(0,0,0,0.85)",
+                  WebkitTextStroke: "1.5px black",
                 }}
               >
                 Engineering Excellence for
