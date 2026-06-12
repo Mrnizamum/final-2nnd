@@ -57,7 +57,7 @@ function Contact() {
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="lp-card">
           <div className="lp-kicker">HQ Address</div>
-          <p className="mt-2 text-sm text-black/70">14 International Business Park, Singapore 609922</p>
+          <p className="mt-2 text-sm text-black/70">61A TUAS SOUTH AVENUE 1, SINGAPORE 637326</p>
         </div>
         <div className="lp-card">
           <div className="lp-kicker">Contact Info</div>
