@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, networkLinks } from "@/components/PageNav";
-import hero from "@/assets/biz-maintenance.jpg";
+import hero from "/imgs/construction.jpg";
 
 export const Route = createFileRoute("/network/construction")({
   head: () => ({
     meta: [
-      { title: "Construction — Industries We Serve | AtripleS" },
+      { title: "Construction — Industries We Serve | \n" },
       { name: "description", content: "Reliable, efficient construction services supporting sustainable development across Singapore and the region." },
     ],
   }),
@@ -24,7 +24,7 @@ function Page() {
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/construction" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
-        <img src={hero} alt="Construction site" className="h-64 w-full object-cover grayscale" />
+        <img src={hero} alt="Construction site" className="h-64 w-full object-cover " />
       </div>
       <div className="lp-prose mt-6">
         <p>

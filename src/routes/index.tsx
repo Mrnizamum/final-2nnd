@@ -1,19 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain } from "lucide-react";
-import slide1 from "@/assets/hd-slide-1.png.asset.json";
-import slide2 from "@/assets/hd-slide-2.png.asset.json";
-import slide3 from "@/assets/hd-slide-3.png.asset.json";
-import slide4 from "@/assets/hd-slide-4.png.asset.json";
-import slide5 from "@/assets/hd-slide-5.png.asset.json";
-import bizProject from "@/assets/biz-project.jpg";
-import bizMaintenance from "@/assets/biz-maintenance.jpg";
-import bizScaffold from "@/assets/biz-scaffold.jpg";
+const slides = [
+  "/imgs/hd-slide-1.png",
+  "/imgs/hd-slide-2.png",
+  "/imgs/hd-slide-3.png",
+  "/imgs/hd-slide-4.png",
+  "/imgs/hd-slide-5.png",
+];
+const bizProject = "/imgs/biz-project.jpg";
+const bizMaintenance = "/imgs/biz-maintenance.jpg";
+const bizScaffold = "/imgs/biz-scaffold.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AtripleS Construction & Engineering Pte. Ltd." },
+      { title: "\n" },
       {
         name: "description",
         content:
@@ -23,8 +25,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const slides = [slide1.url, slide2.url, slide3.url, slide4.url, slide5.url];
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -60,7 +60,7 @@ function Home() {
         <div className="container-x">
           <div className="max-w-3xl text-white">
             <h1 className="font-display text-4xl font-bold leading-[1.1] drop-shadow-md md:text-6xl" style={{ textShadow: '0px 0px 4px rgba(0,0,0,0.9), 0px 0px 2px rgba(0,0,0,1), 0px 1px 3px rgba(0,0,0,0.8)' }}>
-              Engineering Excellence for Industrial Performance
+              {"\n"}
             </h1>
             <p className="mt-6 text-base font-medium text-white/90 md:text-lg" style={{ textShadow: '0px 0px 3px rgba(0,0,0,0.9), 0px 0px 1px rgba(0,0,0,1), 0px 1px 2px rgba(0,0,0,0.8)' }}>
               EPC <span className="mx-2 text-[#ef6c1a]">|</span> General Construction
