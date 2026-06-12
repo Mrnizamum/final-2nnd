@@ -175,7 +175,7 @@ export function SiteHeader() {
         </Link>
         <button
           onClick={() => setOpen((v) => !v)}
-          className={mobileBtnClasses}
+          className={`${mobileBtnClasses} lg:hidden`}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
