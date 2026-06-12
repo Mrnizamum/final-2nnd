@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
-
+const logo = "/imgs/ats-logo.png";
 export function SiteFooter() {
   return (
     <footer className="bg-[#1e40af] text-white">
       <div className="container-x flex flex-col items-center justify-between gap-3 py-3 md:flex-row">
         <Link to="/" className="flex items-center rounded-md bg-white px-3 py-1.5 shadow-sm">
           <img
-            src={logoAsset.url}
+            src={logo}
             alt="AtripleS Construction & Engineering"
             className="h-12 w-auto object-contain"
           />
