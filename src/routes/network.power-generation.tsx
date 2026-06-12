@@ -13,12 +13,7 @@ export const Route = createFileRoute("/network/power-generation")({
   component: Page,
 });
 
-const capabilities = [
-  ["Plant Maintenance", "Routine and preventive maintenance that keeps generating assets running."],
-  ["Turnaround Services", "Planned outages, overhauls and turnarounds executed safely and on schedule."],
-  ["Mechanical Works", "Mechanical erection, alignment and repair for rotating and static equipment."],
-  ["Reliability Support", "Inspection, monitoring and reliability programmes that reduce downtime."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
