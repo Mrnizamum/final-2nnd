@@ -5,8 +5,8 @@ import { PageNav, siteLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Admin Panel — \n" },
-      { name: "description", content: "Internal admin panel for \n" },
+      { title: "Admin Panel — AtripleS Construction & Engineering" },
+      { name: "description", content: "Internal admin panel for AtripleS Construction & Engineering Pte. Ltd." },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),

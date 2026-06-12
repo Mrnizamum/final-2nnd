@@ -5,7 +5,7 @@ import { PageNav, aboutLinks } from "@/components/PageNav";
 export const Route = createFileRoute("/about/strengths")({
   head: () => ({
     meta: [
-      { title: "Operational Strengths — \n" },
+      { title: "Operational Strengths — AtripleS Construction & Engineering" },
       { name: "description", content: "Our capabilities, people, resources and technology — the foundations of reliable project delivery." },
     ],
   }),
@@ -16,7 +16,7 @@ const sections = [
   {
     icon: "🔧",
     title: "Our Capabilities",
-    body: "At \n, we specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery, and industrial sectors. This integrated approach allows us to support clients with efficient, reliable, and coordinated execution from planning to completion.",
+    body: "At AtripleS Construction & Engineering Pte. Ltd., we specialize in delivering integrated engineering solutions with strong capability in EPC project execution and single-source maintenance services. Our expertise covers a full range of engineering disciplines, enabling us to provide complete project solutions under one roof for oil & gas, petrochemical, refinery, and industrial sectors. This integrated approach allows us to support clients with efficient, reliable, and coordinated execution from planning to completion.",
   },
   {
     icon: "👷",

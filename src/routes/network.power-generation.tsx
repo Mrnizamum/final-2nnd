@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, networkLinks } from "@/components/PageNav";
-import hero from "/imgs/power_generation.jpg";
+import hero from "@/assets/ind-power.jpg";
 
 export const Route = createFileRoute("/network/power-generation")({
   head: () => ({
@@ -24,7 +24,7 @@ function Page() {
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/power-generation" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
-        <img src={hero} alt="Power generation plant" className="h-64 w-full object-cover " />
+        <img src={hero} alt="Power generation plant" className="h-64 w-full object-cover grayscale" />
       </div>
       <div className="lp-prose mt-6">
         <p>

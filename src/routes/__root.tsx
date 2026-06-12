@@ -70,10 +70,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "\n" },
+      { title: "AtripleS Construction & Engineering Pte. Ltd." },
       { name: "description", content: "Singapore-based EPC, mechanical, piping, scaffolding and maintenance specialist for the oil & gas, petrochemical and industrial sectors." },
-      { property: "og:title", content: "\n" },
-      { property: "og:description", content: "\n" },
+      { property: "og:title", content: "AtripleS Construction & Engineering Pte. Ltd." },
+      { property: "og:description", content: "Engineering Excellence for Industrial Performance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

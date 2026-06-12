@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
-const logo = "/imgs/ats-logo-transparent.png";
+import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
+
 type SubItem = {
   label: string;
   to: string;
@@ -88,9 +89,9 @@ export function SiteHeader() {
           <nav className={navContainerClasses}>
             <Link to="/" className={logoClasses}>
               <img
-                src={logo}
+                src={logoAsset.url}
                 alt="AtripleS Construction & Engineering"
-                className="h-[72px] w-auto object-contain md:h-[88px]"
+                className="h-[52px] w-auto object-contain md:h-[62px]"
                 style={{ imageRendering: "auto" }}
               />
             </Link>
@@ -98,13 +99,14 @@ export function SiteHeader() {
             {nav.map((item) =>
               item.children ? (
                 <div key={item.label} className="group relative">
-                  <Link
+                   <Link
                     to={item.to}
                     activeProps={{ className: activeItem }}
                     inactiveProps={{ className: inactiveItem }}
-                    className="flex h-full items-center px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors duration-300"
+                    className="flex h-full items-center gap-1 px-4 py-2.5 text-[13px] font-medium tracking-wide transition-colors duration-300"
                   >
                     {item.label}
+                    <ChevronDown className="h-3.5 w-3.5" />
                   </Link>
                   {/* Dropdown */}
                   <div className="invisible absolute left-0 top-full z-50 min-w-[220px] translate-y-1 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
@@ -115,9 +117,10 @@ export function SiteHeader() {
                             <>
                               <Link
                                 to={sub.to}
-                                className="flex items-center px-4 py-1.5 text-[12px] text-white transition-colors hover:bg-white/20"
+                                className="flex items-center justify-between gap-2 px-4 py-1.5 text-[12px] text-white transition-colors hover:bg-white/20"
                               >
                                 <span>{sub.label}</span>
+                                <ChevronRight className="h-3.5 w-3.5" />
                               </Link>
                               <div className="invisible absolute left-full top-0 z-50 min-w-[200px] -translate-x-1 pl-1 opacity-0 transition-all duration-200 group-hover/sub:visible group-hover/sub:translate-x-0 group-hover/sub:opacity-100">
                                 <ul className="rounded-sm bg-[#1e40af]/95 py-1 shadow-xl shadow-black/30 backdrop-blur-md">
@@ -166,15 +169,15 @@ export function SiteHeader() {
 
         {/* Mobile logo + hamburger */}
         <Link to="/" className="flex items-center lg:hidden">
-         <img
-            src={logo}
+          <img
+            src={logoAsset.url}
             alt="AtripleS Construction & Engineering"
             className="h-10 w-auto object-contain"
           />
         </Link>
         <button
           onClick={() => setOpen((v) => !v)}
-          className={`${mobileBtnClasses} lg:hidden`}
+          className={mobileBtnClasses}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

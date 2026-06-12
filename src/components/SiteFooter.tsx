@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
-const logo = "/imgs/ats-logo.png";
+import logoAsset from "@/assets/ats-logo-transparent.png.asset.json";
+
 export function SiteFooter() {
   return (
     <footer className="bg-[#1e40af] text-white">
       <div className="container-x flex flex-col items-center justify-between gap-3 py-3 md:flex-row">
         <Link to="/" className="flex items-center rounded-md bg-white px-3 py-1.5 shadow-sm">
           <img
-            src={logo}
+            src={logoAsset.url}
             alt="AtripleS Construction & Engineering"
             className="h-12 w-auto object-contain"
           />
@@ -40,9 +41,9 @@ export function SiteFooter() {
               title="Admin"
               className="inline-block h-2 w-2 rounded-full bg-yellow-400 transition hover:scale-125"
             />
-            <span>© {new Date().getFullYear()} {"\n"} All rights reserved.</span>
+            <span>© {new Date().getFullYear()} AtripleS Construction & Engineering Pte. Ltd. All rights reserved.</span>
           </span>
-          <span>{"\n"}</span>
+          <span>Engineering Excellence for Industrial Performance</span>
         </div>
       </div>
     </footer>
