@@ -13,12 +13,7 @@ export const Route = createFileRoute("/network/construction")({
   component: Page,
 });
 
-const capabilities = [
-  ["General Construction", "Building and civil construction delivered with disciplined site management."],
-  ["Sustainable Practices", "Construction methods that prioritise safety, quality and environmental responsibility."],
-  ["Project Coordination", "Integrated coordination across trades, suppliers and subcontractors."],
-  ["Quality & Handover", "Quality control and structured handover for predictable project outcomes."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
