@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight, HardHat, Users, Award, Mountain } from "lucide-react";
-import slide1 from "@/assets/hd-slide-1.png.asset.json";
-import slide2 from "@/assets/hd-slide-2.png.asset.json";
-import slide3 from "@/assets/hd-slide-3.png.asset.json";
-import slide4 from "@/assets/hd-slide-4.png.asset.json";
-import slide5 from "@/assets/hd-slide-5.png.asset.json";
+const slides = [
+  "/imgs/hd-slide-1.png",
+  "/imgs/hd-slide-2.png",
+  "/imgs/hd-slide-3.png",
+  "/imgs/hd-slide-4.png",
+  "/imgs/hd-slide-5.png",
+];
 import bizProject from "@/assets/biz-project.jpg";
 import bizMaintenance from "@/assets/biz-maintenance.jpg";
 import bizScaffold from "@/assets/biz-scaffold.jpg";
@@ -23,8 +25,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const slides = [slide1.url, slide2.url, slide3.url, slide4.url, slide5.url];
 
 function Home() {
   const [index, setIndex] = useState(0);
