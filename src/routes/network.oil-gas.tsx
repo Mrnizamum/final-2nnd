@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
 import { PageNav, networkLinks } from "@/components/PageNav";
-import hero from "@/assets/hero-tanks.jpg";
+import hero from "/imgs/oil_and_gas.jpg";
 
 export const Route = createFileRoute("/network/oil-gas")({
   head: () => ({
@@ -24,7 +24,7 @@ function Page() {
       nav={<PageNav title="Field of Business" links={networkLinks} currentPath="/network/oil-gas" />}
     >
       <div className="overflow-hidden rounded-sm border border-black/14">
-        <img src={hero} alt="Oil & gas storage tanks" className="h-64 w-full object-cover grayscale" />
+        <img src={hero} alt="Oil & gas storage tanks" className="h-64 w-full object-cover " />
       </div>
       <div className="lp-prose mt-6">
         <p>
