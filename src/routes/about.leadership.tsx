@@ -44,7 +44,7 @@ function Leadership() {
         ))}
 
         <p className="font-bold text-[#1a1a1a]">Our Commitment</p>
-        <p>AtripleS is committed to maintaining a strong safety driven management approach, ensuring operational excellence, risk control, and long-term trust with our clients and partners in every project we undertake.</p>
+        <p>AtripleS is committed to maintaining a strong safety driven management approach, ensuring operational excellence, risk control, and long term trust with our clients and partners in every project we undertake.</p>
       </div>
     </PageLayout>
   );
