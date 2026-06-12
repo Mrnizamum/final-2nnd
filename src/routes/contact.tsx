@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Send } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { PageLayout } from "@/components/PageLayout";
-import { PageNav, siteLinks } from "@/components/PageNav";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -52,7 +51,6 @@ function Contact() {
       eyebrow="Contact Us"
       title="Get in touch with our team."
       subtitle="Tell us about your project and our team will be in touch shortly."
-      nav={<PageNav title="Navigate" links={siteLinks} currentPath="/contact" />}
     >
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="lp-card">
