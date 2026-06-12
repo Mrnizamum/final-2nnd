@@ -13,12 +13,7 @@ export const Route = createFileRoute("/network/oil-gas")({
   component: Page,
 });
 
-const capabilities = [
-  ["EPC & Project Works", "Engineering, procurement and construction for process and utility packages."],
-  ["Piping & Mechanical", "Prefabrication, erection, alignment and testing of piping and mechanical systems."],
-  ["Plant Maintenance", "Routine, shutdown and turnaround maintenance for refineries, terminals and plants."],
-  ["Tank & Vessel Works", "Fabrication, repair and inspection of storage tanks, vessels and pressure equipment."],
-];
+const capabilities: Array<[string, string]> = [];
 
 function Page() {
   return (
