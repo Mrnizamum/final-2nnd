@@ -113,8 +113,8 @@ function Network() {
               onClick={() => go(i)}
               className={`flex w-full items-center gap-3 rounded-md border p-3 text-left transition ${i === index ? "border-[#1e40af] bg-[#dbeafe]" : "border-black/10 bg-white hover:border-[#1e40af]/40"}`}
             >
-              <img src={s.img} alt="" className="h-12 w-16 rounded-sm object-cover" />
-              <span className="text-sm font-semibold text-[#1e40af]">{s.title}</span>
+              <img src={s.img} alt="" className="h-20 w-28 rounded-sm object-cover" />
+              <span className="text-base font-semibold text-[#1e40af]">{s.title}</span>
             </button>
           </li>
         ))}
