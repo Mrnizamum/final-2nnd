@@ -91,7 +91,7 @@ export function SiteHeader() {
               <img
                 src={logoAsset.url}
                 alt="AtripleS Construction & Engineering"
-                className="h-[52px] w-auto object-contain md:h-[62px]"
+                className="h-[72px] w-auto object-contain md:h-[88px]"
                 style={{ imageRendering: "auto" }}
               />
             </Link>
