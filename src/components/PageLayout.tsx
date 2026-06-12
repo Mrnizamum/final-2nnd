@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import pageBg from "@/assets/page-bg.jpg.asset.json";
-
+const pageBg = "/imgs/page-bg.jpg";
 export function PageLayout({
   eyebrow,
   title,
@@ -19,7 +18,7 @@ export function PageLayout({
       <div
         aria-hidden
         className="fixed inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: `url(${pageBg.url})` }}
+        style={{ backgroundImage: `url(${pageBg})` }}
       />
       <div
         aria-hidden
